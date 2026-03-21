@@ -1,9 +1,11 @@
+import { Hero } from "@/components/hero";
+import { SelectedWorks } from "@/components/selected-works";
+
 export default function Home() {
   return (
-    <main className="flex flex-1 items-center justify-center">
-      <h1 className="text-4xl font-semibold tracking-tight">
-        Juan Pablo Tazzioli
-      </h1>
-    </main>
+    <div>
+      <Hero />
+      <SelectedWorks />
+    </div>
   );
 }
