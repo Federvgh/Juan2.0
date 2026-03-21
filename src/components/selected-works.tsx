@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { assetPath } from "@/lib/utils";
 import {
   HoverSlider,
   HoverSliderImage,
@@ -12,25 +13,25 @@ const SLIDES = [
   {
     id: "footwear",
     title: "Footwear Design",
-    imageUrl: "/images/zapatilla/PRINCIPAL.jpg",
+    imageUrl: assetPath("/images/zapatilla/PRINCIPAL.jpg"),
     href: "/works/footwear",
   },
   {
     id: "steering-wheel",
     title: "Transportation",
-    imageUrl: "/images/bugatti/Principal.jpg",
+    imageUrl: assetPath("/images/bugatti/Principal.jpg"),
     href: "/works/steering-wheel",
   },
   {
     id: "traffic-light",
     title: "Smart Modular",
-    imageUrl: "/images/semaforo/Principal.jpg",
+    imageUrl: assetPath("/images/semaforo/Principal.jpg"),
     href: "/works/traffic-light",
   },
   {
     id: "medal",
     title: "Product Design",
-    imageUrl: "/images/medalla/Principal.jpg",
+    imageUrl: assetPath("/images/medalla/Principal.jpg"),
     href: "/works/medal",
   },
 ];

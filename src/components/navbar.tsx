@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
+import { assetPath } from "@/lib/utils";
 
 const links = [
   { href: "/", label: "Home" },
@@ -21,7 +22,7 @@ export function Navbar() {
       <nav className="mx-auto max-w-6xl flex items-center justify-between px-6 py-4">
         <Link href="/" className="shrink-0">
           <Image
-            src="/images/logo/logo.png"
+            src={assetPath("/images/logo/logo.png")}
             alt="Juan Pablo Tazzioli"
             width={160}
             height={16}

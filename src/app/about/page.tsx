@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Timeline } from "@/components/ui/timeline";
+import { assetPath } from "@/lib/utils";
 
 const timelineData = [
   {
@@ -155,7 +156,7 @@ export default function AboutPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div>
             <Image
-              src="/images/about-me/perfilpng.png"
+              src={assetPath("/images/about-me/perfilpng.png")}
               alt="Juan Pablo Tazzioli"
               width={600}
               height={600}
@@ -165,7 +166,7 @@ export default function AboutPage() {
           </div>
           <div>
             <Image
-              src="/images/about-me/frase2.svg"
+              src={assetPath("/images/about-me/frase2.svg")}
               alt="Design philosophy"
               width={500}
               height={200}
@@ -181,7 +182,7 @@ export default function AboutPage() {
       {/* Full-width image */}
       <div className="mx-auto max-w-6xl px-6 py-16">
         <Image
-          src="/images/about-me/about2.png"
+          src={assetPath("/images/about-me/about2.png")}
           alt="Juan Pablo Tazzioli — Work"
           width={1920}
           height={800}

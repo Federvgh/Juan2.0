@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import AnimatedTextCycle from "@/components/ui/animated-text-cycle";
+import { assetPath } from "@/lib/utils";
 import { FloatingIconsHero } from "@/components/ui/floating-icons-hero";
 
 const roles = [
@@ -114,7 +115,7 @@ export function Hero() {
 
         <div className="relative max-w-sm mx-auto md:mx-0">
           <Image
-            src="/images/about-me/perfilpng.png"
+            src={assetPath("/images/about-me/perfilpng.png")}
             alt="Juan Pablo Tazzioli"
             width={600}
             height={600}

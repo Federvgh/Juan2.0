@@ -1,3 +1,5 @@
+import { assetPath } from "@/lib/utils";
+
 export interface Project {
   slug: string;
   title: string;
@@ -18,14 +20,14 @@ export const projects: Project[] = [
     year: 2019,
     description:
       "Conceptual footwear design exploring modular construction and innovative materials. The shoe features a detachable sole system allowing customization and component replacement.",
-    heroImage: "/images/zapatilla/PRINCIPAL.jpg",
+    heroImage: assetPath("/images/zapatilla/PRINCIPAL.jpg"),
     images: [
-      "/images/zapatilla/001.jpg",
-      "/images/zapatilla/002.jpg",
-      "/images/zapatilla/003.jpg",
-      "/images/zapatilla/004.jpg",
-      "/images/zapatilla/005.jpg",
-      "/images/zapatilla/006.jpg",
+      assetPath("/images/zapatilla/001.jpg"),
+      assetPath("/images/zapatilla/002.jpg"),
+      assetPath("/images/zapatilla/003.jpg"),
+      assetPath("/images/zapatilla/004.jpg"),
+      assetPath("/images/zapatilla/005.jpg"),
+      assetPath("/images/zapatilla/006.jpg"),
     ],
   },
   {
@@ -36,12 +38,12 @@ export const projects: Project[] = [
     year: 2019,
     description:
       "Steering wheel concept for Bugatti, focused on ergonomic design and premium materials. Developed during the Advanced Design program.",
-    heroImage: "/images/bugatti/Principal.jpg",
+    heroImage: assetPath("/images/bugatti/Principal.jpg"),
     images: [
-      "/images/bugatti/01-min.jpg",
-      "/images/bugatti/02-min.jpg",
-      "/images/bugatti/03-min.jpg",
-      "/images/bugatti/04-min.jpg",
+      assetPath("/images/bugatti/01-min.jpg"),
+      assetPath("/images/bugatti/02-min.jpg"),
+      assetPath("/images/bugatti/03-min.jpg"),
+      assetPath("/images/bugatti/04-min.jpg"),
     ],
   },
   {
@@ -52,20 +54,20 @@ export const projects: Project[] = [
     year: 2016,
     description:
       "Smart modular traffic light system designed for urban environments. Finalist at Innovar National Innovation Competition, Buenos Aires 2017.",
-    heroImage: "/images/semaforo/Principal.jpg",
+    heroImage: assetPath("/images/semaforo/Principal.jpg"),
     images: [
-      "/images/semaforo/02.jpg",
-      "/images/semaforo/03.jpg",
-      "/images/semaforo/04.jpg",
-      "/images/semaforo/05.jpg",
-      "/images/semaforo/07.jpg",
-      "/images/semaforo/08.jpg",
-      "/images/semaforo/09.jpg",
-      "/images/semaforo/10.jpg",
-      "/images/semaforo/11.jpg",
-      "/images/semaforo/12.jpg",
-      "/images/semaforo/13.jpg",
-      "/images/semaforo/14.jpg",
+      assetPath("/images/semaforo/02.jpg"),
+      assetPath("/images/semaforo/03.jpg"),
+      assetPath("/images/semaforo/04.jpg"),
+      assetPath("/images/semaforo/05.jpg"),
+      assetPath("/images/semaforo/07.jpg"),
+      assetPath("/images/semaforo/08.jpg"),
+      assetPath("/images/semaforo/09.jpg"),
+      assetPath("/images/semaforo/10.jpg"),
+      assetPath("/images/semaforo/11.jpg"),
+      assetPath("/images/semaforo/12.jpg"),
+      assetPath("/images/semaforo/13.jpg"),
+      assetPath("/images/semaforo/14.jpg"),
     ],
   },
   {
@@ -76,10 +78,10 @@ export const projects: Project[] = [
     year: 2018,
     description:
       "Trophy and medal design for the Argentine national soccer tournament. Finalist at the Iveco National Design Competition.",
-    heroImage: "/images/medalla/Principal.jpg",
+    heroImage: assetPath("/images/medalla/Principal.jpg"),
     images: [
-      "/images/medalla/01.jpg",
-      "/images/medalla/02.jpg",
+      assetPath("/images/medalla/01.jpg"),
+      assetPath("/images/medalla/02.jpg"),
     ],
   },
 ];
