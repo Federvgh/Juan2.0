@@ -1,0 +1,35 @@
+@import "tailwindcss";
+@source "../../src";
+
+@font-face {
+  font-family: "Inter";
+  src: url("../fonts/InterVariable.ttf") format("truetype");
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("../fonts/InterVariable-Italic.ttf") format("truetype");
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: italic;
+}
+
+@theme {
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+  --color-background: #ffffff;
+  --color-foreground: #000000;
+  --color-muted: #b0b0b0;
+  --color-border: #e5e5e5;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+

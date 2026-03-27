@@ -103,13 +103,31 @@ Cada proyecto tiene: descripción, My Contribution, Process. Video es campo opci
 | `ui-designer` | Decisiones visuales, componentes |
 | `qa-tester` | Testing, checklists pre-deploy |
 
+## Estado actual (27 Mar 2026)
+
+- Phases 0-10 completas. Falta deploy (Phase 11).
+- 39 páginas estáticas (3 locales × 13 rutas)
+- 4 videos comprimidos y funcionando (50MB total)
+- Scroll-frames spike: proof of concept con 2 frames en Bugatti. Necesita PNGs transparentes de Juan para producción.
+- Lighthouse: Performance 75, Accessibility 96, SEO 100, Best Practices 96 (dev mode — producción será mejor)
+- Contenido faltante: imágenes de galería de proyectos individuales (Juan debe proveerlas)
+- Traducciones ES/IT: placeholders (copias de EN)
+
+## Errores conocidos
+
+Ver `.claude/LESSONS_LEARNED.md` para errores documentados y sus fixes.
+Buscar antes de debuggear: `grep -i "keyword" .claude/LESSONS_LEARNED.md`
+
 ## No hacer
 
 - No commitear sin autorización explícita
+- No deployar sin que lo pida el usuario — siempre preview local primero
 - No agregar colores fuera de la paleta monocromática
 - No agregar animaciones que compitan con el contenido
 - No instalar dependencias sin justificación
 - No crear archivos de documentación sin que lo pida el usuario
+- No usar `* { padding: 0 }` ni resets CSS manuales (Tailwind maneja el suyo)
+- No usar `aspect-video object-cover` en videos de portfolio (usar `object-contain`)
 
 ---
-**Version:** 2.0.0 | **Updated:** 27 Mar 2026
+**Version:** 2.1.0 | **Updated:** 27 Mar 2026
