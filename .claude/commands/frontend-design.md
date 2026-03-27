@@ -1,103 +1,74 @@
 Directrices visuales para el portfolio de Juan Pablo Tazzioli.
 
-## Identidad visual
+## Filosofía central
 
-Estilo galería minimalista — fondo neutro claro, el color lo aporta cada proyecto.
-NO dark mode. NO gradientes. NO glassmorphism pesado (solo blur sutil en navbar).
+**La UI no opaca los diseños de producto. El trabajo es el protagonista.**
+El sitio es como una galería de arte: paredes blancas, iluminación perfecta, sin marcos dorados.
 
 ## Paleta
 
-- Background: #f0f0f0
-- Surface (cards): #ffffff
-- Text primary: #1a1a1a
-- Text muted: #737373
-- Border: #e5e5e5
-- Accent: heredado del proyecto activo (color dominante del render/imagen hero)
+Monocromática estricta. Ver `.claude/rules/design-system.md`.
+- Background: #FFFFFF
+- Foreground: #000000
+- Muted: #B0B0B0
+- Border: #E5E5E5
+- Link: #0000EE (solo Contact)
+
+Sin colores de acento. Sin gradientes. Sin sombras. Sin glassmorphism.
 
 ## Tipografía
 
-- UI: Geist Sans via next/font (variable, pesos 400-700)
-- Código/datos técnicos: Geist Mono
-- Escala: text-sm para metadata, text-base para cuerpo, text-2xl/text-4xl para títulos
-- Letter-spacing: tracking-wide en labels y categorías (como el sitio actual)
+- **Font:** Inter (variable, local o via next/font)
+- Header nombre: Bold 14px uppercase
+- Menú overlay: 48-56px, weight transition on hover
+- Títulos proyecto grilla: Semi Bold 14-16px
+- Subtítulos: Regular 12-14px, gris
+- Body: Regular 16-18px
 
 ## Layout
 
-- CSS Grid / Tailwind grid — no Bootstrap
-- Espaciado generoso entre secciones (py-16 a py-24)
-- Contenido centrado con max-w-6xl para texto, full-bleed para imágenes hero
-- Layouts asimétricos en páginas de proyecto (imagen grande + texto al lado)
+- Max-width contenido: max-w-6xl (~1152px)
+- Imágenes hero: full-bleed
+- Espaciado secciones: py-16 a py-24
+- Grid Work: 3 col desktop (parametrizable a 2), 2 tablet, 1 mobile
+- Gap entre cards: 20-30px
 
-## Componentes base
+## Animaciones (Framer Motion)
 
-- Navbar: sticky, backdrop-blur-sm sobre fondo claro, logo + links (Home, Works, Contact)
-- Cards de proyecto en Works: imagen + título + categoría, hover con scale-[1.02] + shadow-lg transition-all
-- Footer: mínimo — copyright + social links
-- Botones: borde sólido, sin fill, hover cambia a text-muted (como el btn-start-order actual)
+Solo opacity y transform. Tween con custom easing, no spring.
 
-## Componentes de 21st.dev (referencia: https://21st.dev/community/components)
+| Elemento | Efecto | Duración |
+|----------|--------|----------|
+| Page transition | cross-fade + y:8 | 300ms |
+| Hover cards | scale 1.02 | 400ms ease |
+| Scroll reveal | fade-in + y:20 + stagger | 500ms, stagger 100ms |
+| Menú items | stagger entrada | 100ms delay |
+| Hamburguesa → X | morphing líneas | 300ms |
+| Grid → detalle | layoutId | auto |
 
-Componentes seleccionados para este portfolio. Buscarlos por nombre en 21st.dev e implementar adaptados a la paleta clara.
+Respetar `useReducedMotion`. Usar `viewport={{ once: true }}`.
 
-### Hero (Home page)
-- **Container Scroll Animation** (Aceternity, 835 likes) — render 3D que se transforma al scrollear
-  - O **Scroll Media Expansion Hero** (541 likes) — imagen que se expande al scroll, para abrir con proyecto estrella
-- **Animated Text Cycle** (236 likes) — rotar subtítulo: "Industrial Designer / 3D Specialist / Product Designer"
+## Componentes clave
 
-### Experiencia profesional (Home page)
-- **Timeline** (Aceternity, 864 likes) — reemplaza las 3 columnas de texto plano actuales
-  - Adaptar a fondo claro, línea gris #e5e5e5, puntos accent
-
-### Works page
-- **Gallery with Image Cards** (shadcnblocks, 291 likes) — grid de proyectos con hover elegante
-
-### Navbar
-- **Tubelight Navbar** (819 likes) — indicador animado de página activa
-  - O **Expandable Tabs** (827 likes) — alternativa más interactiva
-  - Adaptar a fondo claro con backdrop-blur
-
-### Skills/Herramientas (si se agrega sección)
-- **Display Cards** (872 likes) — para mostrar herramientas (Rhino, KeyShot, SolidWorks)
-
-### NO usar de 21st.dev
-- AI Chat Components, Pricing, Testimonials (no aplican)
-- Rainbow/Gradient/Shimmer Buttons (demasiado llamativos)
-- Shaders (pesados, estética dark)
-- Todo lo que sea dark mode first sin buena adaptación a light
-
-## Imágenes
-
-- Siempre next/image con width, height, alt descriptivo
-- Hero images: priority={true}, sizes responsive
-- Placeholder: blur (generar blurDataURL de cada imagen)
-- Formatos: dejar que next/image sirva WebP/AVIF automáticamente
-
-## Backgrounds animados (21st.dev)
-
-Usar MÁXIMO 2 componentes de background en todo el sitio:
-
-- **Hero (Home):** Background Paths (líneas curvas animadas) O Dotted Surface (patrón de puntos con profundidad)
-  - Ambos funcionan en fondo claro, son sutiles y no compiten con el contenido
-  - Fuente: https://21st.dev/community/components/s/background
-- **Páginas de proyecto:** Grid Pattern (Magic UI) como fondo estático sutil — estética de planos técnicos/blueprints
-- **Contact:** opcional — Glow (luz sutil que sigue el cursor) o sin background especial
-
-NO usar: Aurora, Shooting Stars, Meteors, Vortex (son dark mode), Sparkles, Gradient Animation (estética SaaS), Retro Grid, Warp (estética gaming).
-
-## Animaciones
-
-- Entrada de elementos: fade-in + translate-y-4 al entrar en viewport (IntersectionObserver o Framer Motion)
-- Transiciones de página: suaves, no abruptas
-- Hover en cards: scale + shadow, duration-300 ease-out
-- Scroll-linked 3D rotation: SOLO en 1-2 proyectos estrella (Bugatti, zapatilla), NO en todas las páginas
-- NO animaciones excesivas — el trabajo del diseñador es el protagonista
+- **Header:** fijo, nombre izq (link a /work), sección actual en gris, hamburguesa + idiomas der
+- **Menú overlay:** fullscreen blanco, 3 items centrados, hover negro/gris
+- **Project card:** imagen + título + subtítulo, sin bordes
+- **Project page:** sistema de bloques (image-full, image-pair, video, text)
+- **About:** 2 col arriba (foto + bio), 1 col CV abajo
+- **Contact:** centrado, datos directos, sin formulario
 
 ## Responsive
 
-- Mobile-first con Tailwind breakpoints
-- Navbar: hamburger menu en mobile (Sheet de shadcn)
-- Grid de works: 1 col mobile, 2 cols tablet, 3 cols desktop
-- Imágenes de proyecto: full-width en mobile, layout asimétrico en desktop
+Mobile-first con Tailwind breakpoints (sm/md/lg).
+- Navbar: hamburguesa siempre (mobile y desktop)
+- Grid: 1 col mobile, 2 tablet, 3 desktop
+- Imágenes: full-width en mobile
+
+## Referencias
+
+- Simo Lahtinen (simolahtinen.com) — máximo minimalismo
+- Teenage Engineering (teenage.engineering/designs) — producto habla solo
+- Pininfarina (pininfarina.it) — imágenes full-bleed, cero decoración
 
 ## Regla de oro
 

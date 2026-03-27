@@ -39,3 +39,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# source content (heavy files, not for repo)
+/PAGINA 2026 JUAN/
