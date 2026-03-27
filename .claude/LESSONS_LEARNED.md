@@ -1,5 +1,7 @@
 # Lessons Learned — Juan2.0 Portfolio
 
+Buscar: `grep -i "keyword" .claude/LESSONS_LEARNED.md`
+
 ## LL-001: Tailwind v4 `* { padding: 0 }` overrides utility classes
 **Fecha:** 2026-03-27
 **Síntoma:** Todas las clases de padding/margin de Tailwind daban 0px. `px-20`, `pt-24`, etc. no se aplicaban.
@@ -55,3 +57,11 @@
 **Causa raíz:** Videos renderizados en alta calidad sin compresión web.
 **Fix:** `ffmpeg -crf 23 -preset slow -movflags +faststart -vf "scale='min(1920,iw)':-2"`. Resultado: 85% reducción promedio (339MB → 50MB).
 **Lección:** CRF 23 con preset slow es el sweet spot para portfolio. Si un video queda >20MB, subir CRF a 25-28.
+
+## LL-009: basePath de GitHub Pages no se aplica a assets en client components
+
+**Fecha:** 2026-03-27
+**Síntoma:** Imágenes y videos no cargan en GitHub Pages (404). Las rutas salen como `/images/...` sin el `/Juan2.0/` prefix.
+**Causa raíz:** `next/image` con `unoptimized: true` NO aplica `basePath` a las URLs. Y `<video src>`, `<source src>` nativos tampoco. Solo `next/link` y `redirect()` lo respetan automáticamente.
+**Fix:** Crear helper `assetUrl()` en `src/lib/utils.ts` que lee `GITHUB_PAGES` env var en build time y prefixa `/Juan2.0`. Aplicar a TODAS las rutas de assets en `projects.ts` y componentes server. NO usar en client components (no tienen acceso a env vars de build).
+**Lección:** Con `output: "export"` + `basePath`, resolver todas las URLs de assets en server side (projects.ts, page components) antes de pasarlas a client components. El basePath solo funciona automáticamente en `next/link` y `redirect()`.
