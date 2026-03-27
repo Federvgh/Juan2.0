@@ -1,7 +1,6 @@
 "use client";
 
 import { useRef, useEffect } from "react";
-import { assetUrl } from "@/lib/utils";
 
 interface VideoPlayerProps {
   src: string;
@@ -37,10 +36,10 @@ export function VideoPlayer({ src, poster }: VideoPlayerProps) {
       muted
       playsInline
       loop
-      poster={poster ? assetUrl(poster) : undefined}
+      poster={poster}
       preload="metadata"
     >
-      <source src={assetUrl(src)} type="video/mp4" />
+      <source src={src} type="video/mp4" />
     </video>
   );
 }

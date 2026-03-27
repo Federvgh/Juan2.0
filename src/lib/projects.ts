@@ -14,7 +14,7 @@ export const projects: Project[] = [
     hasVideo: true,
     blocks: [
       { _type: "scroll-frames", _key: "bugatti-scroll", wireframe: assetUrl("/images/scroll-frames/wireframe.jpg"), render: assetUrl("/images/scroll-frames/render.jpg"), alt: "Bugatti Millenium Steering Wheel" },
-      { _type: "video", _key: "bugatti-video", video: { src: "/videos/bugatti-steering-wheel.mp4" } },
+      { _type: "video", _key: "bugatti-video", video: { src: assetUrl("/videos/bugatti-steering-wheel.mp4") } },
     ],
   },
   {
@@ -28,7 +28,7 @@ export const projects: Project[] = [
     thumbnail: { src: assetUrl("/images/work/04.jpg"), alt: "BeyonCa Steering Wheel" },
     hasVideo: true,
     blocks: [
-      { _type: "video", _key: "beyonca-video", video: { src: "/videos/beyonca-steering-wheel.mp4" } },
+      { _type: "video", _key: "beyonca-video", video: { src: assetUrl("/videos/beyonca-steering-wheel.mp4") } },
     ],
   },
   {
@@ -36,7 +36,7 @@ export const projects: Project[] = [
     thumbnail: { src: assetUrl("/images/work/05.jpg"), alt: "Speaker Concept" },
     hasVideo: true,
     blocks: [
-      { _type: "video", _key: "speaker-video", video: { src: "/videos/speaker-concept.mp4" } },
+      { _type: "video", _key: "speaker-video", video: { src: assetUrl("/videos/speaker-concept.mp4") } },
     ],
   },
   {
@@ -44,7 +44,7 @@ export const projects: Project[] = [
     thumbnail: { src: assetUrl("/images/work/06.jpg"), alt: "Pagani Steering Wheel Concept" },
     hasVideo: true,
     blocks: [
-      { _type: "video", _key: "pagani-video", video: { src: "/videos/pagani-steering-wheel.mp4" } },
+      { _type: "video", _key: "pagani-video", video: { src: assetUrl("/videos/pagani-steering-wheel.mp4") } },
     ],
   },
   {
