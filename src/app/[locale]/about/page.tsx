@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { getDictionary } from "@/lib/i18n/get-dictionary";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
+import { assetUrl } from "@/lib/utils";
 
 export default async function AboutPage({
   params,
@@ -18,7 +19,7 @@ export default async function AboutPage({
         <ScrollReveal>
           <div className="relative aspect-[3/4] w-full max-w-sm">
             <Image
-              src="/images/about/profile.png"
+              src={assetUrl("/images/about/profile.png")}
               alt="Juan Pablo Tazzioli"
               fill
               sizes="(max-width: 768px) 100vw, 50vw"
