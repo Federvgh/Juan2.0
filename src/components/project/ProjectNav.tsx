@@ -11,7 +11,7 @@ interface ProjectNavProps {
 
 export function ProjectNav({ prev, next, locale, dict }: ProjectNavProps) {
   return (
-    <nav className="flex justify-center gap-16 px-6 py-24">
+    <nav className="flex justify-center gap-8 md:gap-16 px-6 py-16 md:py-24">
       {prev ? (
         <Link
           href={`/${locale}/work/${prev.slug}/`}
