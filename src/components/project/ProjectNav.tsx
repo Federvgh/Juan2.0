@@ -11,19 +11,19 @@ interface ProjectNavProps {
 
 export function ProjectNav({ prev, next, locale, dict }: ProjectNavProps) {
   return (
-    <nav className="flex justify-center gap-24 md:gap-32 items-start max-w-3xl mx-auto px-6 py-24">
+    <nav className="flex justify-center gap-16 px-6 py-24">
       {prev ? (
         <Link
           href={`/${locale}/work/${prev.slug}/`}
-          className="group text-center transition-colors"
+          className="group block text-right transition-colors"
         >
-          <span className="text-base text-[#888] group-hover:text-foreground transition-colors">
+          <span className="block text-lg font-medium text-[#666] group-hover:text-foreground transition-colors">
             &larr; Previous Project
           </span>
-          <p className="text-sm text-muted mt-1">
+          <span className="block text-xs text-[#aaa] mt-1.5">
             {dict.projects[prev.slug as keyof typeof dict.projects]?.title ??
               prev.slug}
-          </p>
+          </span>
         </Link>
       ) : (
         <span />
@@ -31,15 +31,15 @@ export function ProjectNav({ prev, next, locale, dict }: ProjectNavProps) {
       {next ? (
         <Link
           href={`/${locale}/work/${next.slug}/`}
-          className="group text-center transition-colors"
+          className="group block transition-colors"
         >
-          <span className="text-base text-[#888] group-hover:text-foreground transition-colors">
+          <span className="block text-lg font-medium text-[#666] group-hover:text-foreground transition-colors">
             Next Project &rarr;
           </span>
-          <p className="text-sm text-muted mt-1">
+          <span className="block text-xs text-[#aaa] mt-1.5">
             {dict.projects[next.slug as keyof typeof dict.projects]?.title ??
               next.slug}
-          </p>
+          </span>
         </Link>
       ) : (
         <span />

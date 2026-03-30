@@ -50,7 +50,7 @@ export function Header() {
           )}
         </div>
 
-        <div className="flex items-center gap-16">
+        <div className="flex items-center gap-24">
           <LanguageSelector locale={locale} />
           <HamburgerButton
             isOpen={menuOpen}
