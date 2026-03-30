@@ -44,16 +44,13 @@ export default async function AboutPage({
           {a.selectedExperience}
         </h2>
       </ScrollReveal>
-      <div className="space-y-8 mb-16">
+      <div className="space-y-16 mb-16">
         {a.experiences.map((exp, i) => (
           <ScrollReveal key={exp.company} delay={i * 0.05}>
             <div>
-              <div className="flex flex-col md:flex-row md:justify-between md:items-baseline gap-1">
-                <h3 className="text-base font-semibold">{exp.company}</h3>
-                <span className="text-xs text-muted">{exp.period}</span>
-              </div>
+              <h3 className="text-base font-semibold">{exp.company}</h3>
               <p className="text-sm text-muted mt-1">
-                {exp.role} — {exp.location}
+                {exp.role} — {exp.location} - {exp.period}
               </p>
               <p className="text-sm mt-2 leading-relaxed">{exp.description}</p>
             </div>
@@ -104,10 +101,19 @@ export default async function AboutPage({
       </div>
 
       {/* In Process */}
-      <ScrollReveal>
-        <h2 className="text-sm font-bold uppercase tracking-wide mb-6">
+      <ScrollReveal className="mt-32">
+        <h2 className="text-sm font-bold uppercase tracking-wide mb-8">
           {a.inProcess}
         </h2>
+        <div className="relative w-full aspect-video mb-6">
+          <Image
+            src={assetUrl("/images/about/in-process.jpg")}
+            alt="Full-scale interior development"
+            fill
+            sizes="(max-width: 1024px) 100vw, 1024px"
+            className="object-cover"
+          />
+        </div>
         <p className="text-sm text-muted">{a.inProcessDescription}</p>
       </ScrollReveal>
     </section>

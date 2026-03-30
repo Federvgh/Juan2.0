@@ -13,6 +13,10 @@ function getCurrentSection(pathname: string): string {
   return "Work";
 }
 
+function isProjectPage(pathname: string): boolean {
+  return /^\/(en|es|it)\/work\/[^/]+/.test(pathname);
+}
+
 function getCurrentLocale(pathname: string): string {
   const match = pathname.match(/^\/(en|es|it)\//);
   return match ? match[1] : "en";
@@ -34,10 +38,19 @@ export function Header() {
           >
             Juan Pablo Tazzioli
           </Link>
-          <p className="text-xs text-muted mt-0.5">{section}</p>
+          {isProjectPage(pathname) ? (
+            <Link
+              href={`/${locale}/work/`}
+              className="text-xs text-muted mt-0.5 block hover:underline transition-all duration-200"
+            >
+              Back to Work
+            </Link>
+          ) : (
+            <p className="text-xs text-muted mt-0.5">{section}</p>
+          )}
         </div>
 
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-16">
           <LanguageSelector locale={locale} />
           <HamburgerButton
             isOpen={menuOpen}

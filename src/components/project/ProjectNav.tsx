@@ -11,15 +11,19 @@ interface ProjectNavProps {
 
 export function ProjectNav({ prev, next, locale, dict }: ProjectNavProps) {
   return (
-    <nav className="flex justify-between items-center max-w-3xl mx-auto px-6 py-16 border-t border-border">
+    <nav className="flex justify-center gap-24 md:gap-32 items-start max-w-3xl mx-auto px-6 py-24">
       {prev ? (
         <Link
           href={`/${locale}/work/${prev.slug}/`}
-          className="text-sm text-muted hover:text-foreground transition-colors"
+          className="group text-center transition-colors"
         >
-          &larr;{" "}
-          {dict.projects[prev.slug as keyof typeof dict.projects]?.title ??
-            prev.slug}
+          <span className="text-base text-[#888] group-hover:text-foreground transition-colors">
+            &larr; Previous Project
+          </span>
+          <p className="text-sm text-muted mt-1">
+            {dict.projects[prev.slug as keyof typeof dict.projects]?.title ??
+              prev.slug}
+          </p>
         </Link>
       ) : (
         <span />
@@ -27,11 +31,15 @@ export function ProjectNav({ prev, next, locale, dict }: ProjectNavProps) {
       {next ? (
         <Link
           href={`/${locale}/work/${next.slug}/`}
-          className="text-sm text-muted hover:text-foreground transition-colors text-right"
+          className="group text-center transition-colors"
         >
-          {dict.projects[next.slug as keyof typeof dict.projects]?.title ??
-            next.slug}{" "}
-          &rarr;
+          <span className="text-base text-[#888] group-hover:text-foreground transition-colors">
+            Next Project &rarr;
+          </span>
+          <p className="text-sm text-muted mt-1">
+            {dict.projects[next.slug as keyof typeof dict.projects]?.title ??
+              next.slug}
+          </p>
         </Link>
       ) : (
         <span />

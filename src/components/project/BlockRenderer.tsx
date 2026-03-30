@@ -55,7 +55,7 @@ export function BlockRenderer({ block }: BlockRendererProps) {
 
     case "video":
       return (
-        <ScrollReveal className="my-8 md:my-12 max-w-5xl mx-auto px-6">
+        <ScrollReveal className="my-8 md:my-12 max-w-3xl mx-auto px-6">
           <VideoPlayer src={block.video.src} poster={block.video.poster} />
         </ScrollReveal>
       );
