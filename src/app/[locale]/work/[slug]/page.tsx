@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { locales } from "@/lib/i18n/config";
 import { getDictionary } from "@/lib/i18n/get-dictionary";
-import { projects, getProject, getAdjacentProjects } from "@/lib/projects";
+import { projects, featuredProject, getProject, getAdjacentProjects } from "@/lib/projects";
 import { ProjectHeader } from "@/components/project/ProjectHeader";
 import { BlockRenderer } from "@/components/project/BlockRenderer";
 import { ProjectNav } from "@/components/project/ProjectNav";
@@ -12,8 +12,9 @@ import {
 } from "@/components/seo/StructuredData";
 
 export function generateStaticParams() {
+  const allProjects = [featuredProject, ...projects];
   return locales.flatMap((locale) =>
-    projects.map((p) => ({ locale, slug: p.slug }))
+    allProjects.map((p) => ({ locale, slug: p.slug }))
   );
 }
 

@@ -15,7 +15,8 @@ export type ContentBlock =
   | { _type: "image-pair"; _key: string; left: ImageAsset; right: ImageAsset }
   | { _type: "video"; _key: string; video: VideoAsset }
   | { _type: "text"; _key: string; content: string }
-  | { _type: "scroll-frames"; _key: string; wireframe: string; render: string; alt: string };
+  | { _type: "scroll-frames"; _key: string; wireframe: string; render: string; alt: string }
+  | { _type: "image-loop"; _key: string; images: ImageAsset[]; interval?: number };
 
 export interface Project {
   slug: string;

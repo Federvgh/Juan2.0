@@ -1,6 +1,7 @@
 import Image from "next/image";
 import type { ContentBlock } from "@/lib/types";
 import { VideoPlayer } from "./VideoPlayer";
+import { ImageLoop } from "./ImageLoop";
 import { ScrollRevealFrames } from "./ScrollRevealFrames";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 
@@ -17,45 +18,42 @@ export function BlockRenderer({ block }: BlockRendererProps) {
     case "image-full":
       return (
         <ScrollReveal className="my-8 md:my-12 max-w-5xl mx-auto px-6">
-          <div className="relative w-full aspect-video">
-            <Image
-              src={block.image.src}
-              alt={block.image.alt}
-              fill
-              sizes="(max-width: 1024px) 100vw, 1024px"
-              className="object-cover"
-            />
-          </div>
+          <Image
+            src={block.image.src}
+            alt={block.image.alt}
+            width={2400}
+            height={1108}
+            sizes="(max-width: 1024px) 100vw, 1024px"
+            className="w-full h-auto"
+          />
         </ScrollReveal>
       );
 
     case "image-pair":
       return (
         <ScrollReveal className="my-8 md:my-12 max-w-5xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
-          <div className="relative aspect-square">
-            <Image
-              src={block.left.src}
-              alt={block.left.alt}
-              fill
-              sizes="(max-width: 768px) 100vw, 50vw"
-              className="object-cover"
-            />
-          </div>
-          <div className="relative aspect-square">
-            <Image
-              src={block.right.src}
-              alt={block.right.alt}
-              fill
-              sizes="(max-width: 768px) 100vw, 50vw"
-              className="object-cover"
-            />
-          </div>
+          <Image
+            src={block.left.src}
+            alt={block.left.alt}
+            width={1200}
+            height={1108}
+            sizes="(max-width: 768px) 100vw, 50vw"
+            className="w-full h-auto object-cover"
+          />
+          <Image
+            src={block.right.src}
+            alt={block.right.alt}
+            width={1200}
+            height={1108}
+            sizes="(max-width: 768px) 100vw, 50vw"
+            className="w-full h-auto object-cover"
+          />
         </ScrollReveal>
       );
 
     case "video":
       return (
-        <ScrollReveal className="my-8 md:my-12 max-w-3xl mx-auto px-6">
+        <ScrollReveal className="my-8 md:my-12 max-w-5xl mx-auto px-6">
           <VideoPlayer src={block.video.src} poster={block.video.poster} />
         </ScrollReveal>
       );
@@ -64,6 +62,13 @@ export function BlockRenderer({ block }: BlockRendererProps) {
       return (
         <ScrollReveal className="my-8 md:my-12 max-w-3xl mx-auto px-6">
           <p className="text-base leading-relaxed">{block.content}</p>
+        </ScrollReveal>
+      );
+
+    case "image-loop":
+      return (
+        <ScrollReveal className="my-8 md:my-12 max-w-5xl mx-auto px-6">
+          <ImageLoop images={block.images} interval={block.interval} />
         </ScrollReveal>
       );
 

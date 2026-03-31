@@ -65,3 +65,19 @@ Buscar: `grep -i "keyword" .claude/LESSONS_LEARNED.md`
 **Causa raíz:** `next/image` con `unoptimized: true` NO aplica `basePath` a las URLs. Y `<video src>`, `<source src>` nativos tampoco. Solo `next/link` y `redirect()` lo respetan automáticamente.
 **Fix:** Crear helper `assetUrl()` en `src/lib/utils.ts` que lee `GITHUB_PAGES` env var en build time y prefixa `/Juan2.0`. Aplicar a TODAS las rutas de assets en `projects.ts` y componentes server. NO usar en client components (no tienen acceso a env vars de build).
 **Lección:** Con `output: "export"` + `basePath`, resolver todas las URLs de assets en server side (projects.ts, page components) antes de pasarlas a client components. El basePath solo funciona automáticamente en `next/link` y `redirect()`.
+
+## LL-010: Siempre mapear la maqueta visual bloque por bloque antes de implementar
+**Fecha:** 2026-04-01
+**Síntoma:** Se implementó el proyecto ShiftCore con bloques en orden incorrecto, anchos inconsistentes, y el featured card mostrando imagen estática en vez del loop. Requirió 5+ iteraciones de corrección con el usuario.
+**Causa raíz:** No se estudió la maqueta de referencia ("DENTRO DE WORK.jpg") con suficiente detalle antes de codear. Se asumió un orden de bloques en vez de leerlo pixel por pixel de la maqueta. Errores específicos:
+1. Video debía ir primero, se puso tercero
+2. Image-2 (swap) debía ir antes de image-1 (3 vistas), se puso al revés
+3. Loop debía ir antes de image-3 (one shell), se puso después
+4. Featured card en grilla de Work debía mostrar el loop, se puso imagen estática
+5. Video y texto tenían max-w-3xl mientras imágenes tenían max-w-5xl (inconsistente)
+**Fix:** Reordenar bloques, cambiar anchos, usar ImageLoop en FeaturedCard.
+**Lección:** Cuando el usuario/cliente provee maquetas visuales:
+1. **Mapear cada bloque de arriba a abajo** antes de escribir una sola línea — listar el orden en texto plano y confirmar con el usuario
+2. **Verificar anchos/márgenes** — todo el contenido dentro de una página de proyecto debe compartir el mismo max-width
+3. **Identificar componentes especiales** (loop, video, hero) y confirmar su comportamiento antes de implementar
+4. **Hacer /grill-me** cuando hay maquetas de referencia — preguntar específicamente sobre orden, anchos, y comportamientos interactivos

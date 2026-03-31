@@ -1,6 +1,30 @@
 import type { Project } from "./types";
 import { assetUrl } from "./utils";
 
+export const featuredProject: Project = {
+  slug: "shiftcore-footwear",
+  thumbnail: { src: assetUrl("/images/projects/shiftcore-footwear/image-3.jpg"), alt: "ShiftCore Modular Footwear Concept" },
+  hasVideo: true,
+  blocks: [
+    { _type: "video", _key: "sc-video", video: { src: assetUrl("/videos/shiftcore-footwear.mp4") } },
+    { _type: "image-full", _key: "sc-2", image: { src: assetUrl("/images/projects/shiftcore-footwear/image-2.jpg"), alt: "Swap the inner — adapt your footwear to your day" } },
+    { _type: "image-full", _key: "sc-1", image: { src: assetUrl("/images/projects/shiftcore-footwear/image-1.jpg"), alt: "ShiftCore product views — shell, inner boot and assembled" } },
+    { _type: "image-loop", _key: "sc-loop", images: [
+      { src: assetUrl("/images/projects/shiftcore-footwear/loop-1.jpg"), alt: "ShiftCore colorway — orange" },
+      { src: assetUrl("/images/projects/shiftcore-footwear/loop-2.jpg"), alt: "ShiftCore colorway — brown" },
+      { src: assetUrl("/images/projects/shiftcore-footwear/loop-3.jpg"), alt: "ShiftCore colorway — olive" },
+      { src: assetUrl("/images/projects/shiftcore-footwear/loop-4.jpg"), alt: "ShiftCore colorway — blue" },
+      { src: assetUrl("/images/projects/shiftcore-footwear/loop-5.jpg"), alt: "ShiftCore colorway — yellow" },
+      { src: assetUrl("/images/projects/shiftcore-footwear/loop-6.jpg"), alt: "ShiftCore colorway — grey" },
+    ], interval: 1800 },
+    { _type: "image-full", _key: "sc-3", image: { src: assetUrl("/images/projects/shiftcore-footwear/image-3.jpg"), alt: "One shell. Multiple inners. Built to adapt." } },
+    { _type: "image-full", _key: "sc-4", image: { src: assetUrl("/images/projects/shiftcore-footwear/image-4.jpg"), alt: "Leave the street at the door" } },
+    { _type: "image-full", _key: "sc-5", image: { src: assetUrl("/images/projects/shiftcore-footwear/image-5.jpg"), alt: "Pack more. Carry less." } },
+    { _type: "image-full", _key: "sc-6", image: { src: assetUrl("/images/projects/shiftcore-footwear/image-6.jpg"), alt: "Pack more. Carry less. — suitcase view" } },
+    { _type: "image-full", _key: "sc-7", image: { src: assetUrl("/images/projects/shiftcore-footwear/image-7.jpg"), alt: "ShiftCore brand logo" } },
+  ],
+};
+
 export const projects: Project[] = [
   {
     slug: "bow-timepiece",
@@ -67,15 +91,17 @@ export const projects: Project[] = [
   },
 ];
 
+const allProjects = [featuredProject, ...projects];
+
 export function getProject(slug: string): Project | undefined {
-  return projects.find((p) => p.slug === slug);
+  return allProjects.find((p) => p.slug === slug);
 }
 
 export function getAdjacentProjects(slug: string) {
-  const index = projects.findIndex((p) => p.slug === slug);
+  const index = allProjects.findIndex((p) => p.slug === slug);
   if (index === -1) return { prev: undefined, next: undefined };
 
-  const prev = projects[(index - 1 + projects.length) % projects.length];
-  const next = projects[(index + 1) % projects.length];
+  const prev = allProjects[(index - 1 + allProjects.length) % allProjects.length];
+  const next = allProjects[(index + 1) % allProjects.length];
   return { prev, next };
 }

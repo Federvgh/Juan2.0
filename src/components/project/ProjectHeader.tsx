@@ -16,7 +16,7 @@ export function ProjectHeader({
   process,
 }: ProjectHeaderProps) {
   return (
-    <div className="max-w-3xl mx-auto px-6 mb-12">
+    <div className="max-w-5xl mx-auto px-6 mb-12">
       <ScrollReveal>
         <h1 className="text-3xl md:text-4xl font-bold tracking-tight">
           {title}

@@ -73,6 +73,13 @@ const en = {
     downloadPortfolio: "Download Portfolio",
   },
   projects: {
+    "shiftcore-footwear": {
+      title: "ShiftCore Modular Footwear Concept",
+      subtitle: "Modular adaptive footwear system",
+      description: "A modular footwear system built around one outer shell and interchangeable inner boots, designed to adapt to style, function, comfort and everyday use.",
+      myContribution: "I developed the project from the original concept and modular system logic to the formal design, 3D modelling, renderings, animations and final visual storytelling.",
+      process: "Concept development, product strategy, modular system design, Rhinoceros 3D, KeyShot, animation workflows and AI-assisted visual refinement.",
+    },
     "bow-timepiece": {
       title: "BOW Nautical Timepiece Concept",
       subtitle: "Luxury nautical-inspired mechanical watch",
