@@ -46,7 +46,7 @@ export function ImageLoop({ images, interval = 400 }: ImageLoopProps) {
           alt={img.alt}
           fill
           sizes="(max-width: 1024px) 100vw, 1024px"
-          className={`object-cover transition-opacity duration-700 ${
+          className={`object-contain transition-opacity duration-700 ${
             i === current ? "opacity-100" : "opacity-0"
           }`}
           priority={i === 0}
