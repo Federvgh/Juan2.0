@@ -30,7 +30,7 @@ export function FeaturedCard({
       >
         <div className="relative w-full overflow-hidden">
           {loopImages ? (
-            <ImageLoop images={loopImages} interval={1800} />
+            <ImageLoop images={loopImages} interval={600} />
           ) : (
             <img
               src={project.thumbnail.src}

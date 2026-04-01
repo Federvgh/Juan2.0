@@ -88,11 +88,11 @@ const en = {
       process: "The design process started with research into marine propulsion systems and yacht architecture, translating nautical forms into watchmaking details.",
     },
     "bugatti-steering-wheel": {
-      title: "Bugatti Millenium Steering Wheel",
+      title: "Bugatti Millenium Steering Wheel Concept",
       subtitle: "Luxury steering wheel concept",
-      description: "Reinterpretation of the Chiron steering wheel with digital displays, aluminium switches and fingerprint-activated engine start.",
-      myContribution: "Led the conceptual design phase, 3D modelling in Rhino and visual development in KeyShot.",
-      process: "The design process involved studying the Chiron's interior language and proposing a forward-looking evolution.",
+      description: "A reinterpretation of the Chiron steering wheel through integrated technology, refined detailing and a more driver-focused interface. Developed as part of the Bugatti Millenium project, this steering wheel concept reinterprets the visual and performance language of the Chiron interior in a more advanced and contemporary way. The design combines sporty proportions with digital displays, aluminium switches and a fingerprint-based start function within a clean, sculpted interface.",
+      myContribution: "I focused on the steering wheel design development, including 3D modelling, form refinement and the visual integration of interface and material elements.",
+      process: "Rhino, KeyShot and AI-assisted visual workflows for animation and presentation.",
     },
     "chopard-clock": {
       title: "Chopard Clock for BeyonCa",
