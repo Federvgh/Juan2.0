@@ -30,7 +30,16 @@ export const projects: Project[] = [
     slug: "bow-timepiece",
     thumbnail: { src: assetUrl("/images/work/01.jpg"), alt: "BOW Nautical Timepiece Concept" },
     hasVideo: false,
-    blocks: [],
+    blocks: [
+      { _type: "image-full", _key: "bow-01", image: { src: assetUrl("/images/projects/bow-timepiece/01.jpg"), alt: "BOW Timeless Value — yacht deck with logo" } },
+      { _type: "image-full", _key: "bow-02", image: { src: assetUrl("/images/projects/bow-timepiece/02.jpg"), alt: "BOW concept sketches — watch design explorations on dark background" } },
+      { _type: "image-pair", _key: "bow-pair-1", left: { src: assetUrl("/images/projects/bow-timepiece/03.jpg"), alt: "BOW watch — dark 3D render, perspective view" }, right: { src: assetUrl("/images/projects/bow-timepiece/04.jpg"), alt: "BOW watch — dark 3D render, rear view" } },
+      { _type: "image-full", _key: "bow-05", image: { src: assetUrl("/images/projects/bow-timepiece/05.jpg"), alt: "BOW watch — twin propeller controls close-up" } },
+      { _type: "image-full", _key: "bow-06", image: { src: assetUrl("/images/projects/bow-timepiece/06.jpg"), alt: "BOW watch — propeller detail with rotation mechanism" } },
+      { _type: "image-full", _key: "bow-07", image: { src: assetUrl("/images/projects/bow-timepiece/07.jpg"), alt: "BOW watch — silver variant, full perspective render" } },
+      { _type: "image-full", _key: "bow-08", image: { src: assetUrl("/images/projects/bow-timepiece/08.jpg"), alt: "BOW watch — strap integration mechanism, four views" } },
+      { _type: "image-full", _key: "bow-09", image: { src: assetUrl("/images/projects/bow-timepiece/09.jpg"), alt: "BOW Timeless Value — propellers emerging from water" } },
+    ],
   },
   {
     slug: "bugatti-steering-wheel",

@@ -83,9 +83,9 @@ const en = {
     "bow-timepiece": {
       title: "BOW Nautical Timepiece Concept",
       subtitle: "Luxury nautical-inspired mechanical watch",
-      description: "Luxury mechanical timepiece concept inspired by marine propulsion, yacht decks and twin propellers. Rebellion T2M movement. Studies in black titanium, sapphire, ceramic and carbon fibre.",
-      myContribution: "Full conceptual design, 3D modelling and visual development using Rhino, KeyShot and AI-assisted workflows.",
-      process: "The design process started with research into marine propulsion systems and yacht architecture, translating nautical forms into watchmaking details.",
+      description: "This concept translates nautical references into a sculptural mechanical timepiece for marine enthusiasts. The proposal combines deck-inspired surface rhythm, twin-propeller side controls and a distinctive strap integration system, creating a watch that feels technical, original and strongly connected to the world of yachting.",
+      myContribution: "I developed the full concept, including design language, case architecture, strap integration, material studies and 3D modelling.",
+      process: "Rhino, KeyShot, concept development and AI-assisted visual workflows for presentation.",
     },
     "bugatti-steering-wheel": {
       title: "Bugatti Millenium Steering Wheel Concept",
@@ -118,7 +118,7 @@ const en = {
     "pagani-steering-wheel": {
       title: "Pagani Steering Wheel Concept",
       subtitle: "Oval-driven luxury interface",
-      description: "A reinterpretation of Pagani's design language through oval-driven geometry, sculpted detailing and a more expressive driver-focused interface.",
+      description: "This concept translates Pagani's visual identity into a more integrated and contemporary steering wheel proposal. The oval was used as the main formal language, while the circular controls and central button cluster referenced the brand's signature quad-exhaust layout, combining performance character with premium detailing and a more sculpted visual expression.",
       myContribution: "I developed the steering wheel through form refinement, 3D modelling and the integration of oval-based geometry, interface elements and material details.",
       process: "Rhino, KeyShot and AI-assisted visual workflows for animation and presentation.",
     },
