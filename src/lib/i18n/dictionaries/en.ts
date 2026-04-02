@@ -118,9 +118,9 @@ const en = {
     "pagani-steering-wheel": {
       title: "Pagani Steering Wheel Concept",
       subtitle: "Oval-driven luxury interface",
-      description: "Reinterpretation of Pagani's design language with oval geometry and circular controls referencing the quad exhaust signature.",
-      myContribution: "Conceptual design and 3D development in Rhino and KeyShot.",
-      process: "Deep study of Pagani's formal language, translating their exterior DNA into an interior interface.",
+      description: "A reinterpretation of Pagani's design language through oval-driven geometry, sculpted detailing and a more expressive driver-focused interface.",
+      myContribution: "I developed the steering wheel through form refinement, 3D modelling and the integration of oval-based geometry, interface elements and material details.",
+      process: "Rhino, KeyShot and AI-assisted visual workflows for animation and presentation.",
     },
     "levc-insignia": {
       title: "LEVC Brand Insignia Redesign",

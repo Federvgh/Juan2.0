@@ -53,7 +53,7 @@ export function VideoPlayer({ src, poster }: VideoPlayerProps) {
       <button
         onClick={toggleMute}
         aria-label={isMuted ? "Unmute video" : "Mute video"}
-        className="absolute bottom-4 right-4 w-10 h-10 flex items-center justify-center bg-black/60 text-white rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+        className="absolute bottom-4 right-4 w-10 h-10 flex items-center justify-center bg-black/60 text-white rounded-full opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300"
       >
         {isMuted ? (
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
