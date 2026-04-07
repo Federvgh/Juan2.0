@@ -125,9 +125,9 @@ const en = {
     "levc-insignia": {
       title: "LEVC Brand Insignia Redesign",
       subtitle: "Production-ready exterior emblem",
-      description: "Redesign of the LEVC exterior emblem: cleaner proportions, diamond-cut detail and refined horse motif. Final model produced and now in use as the official insignia.",
-      myContribution: "Led the redesign from concept through to production-ready 3D data.",
-      process: "Iterative refinement process focusing on proportional harmony and manufacturing feasibility.",
+      description: "Developed within LEVC, this project focused on the redesign of the brand's exterior insignia as part of its visual evolution from the historic London taxi image towards a more refined and versatile identity. The new emblem preserves LEVC's recognisable elements while reinterpreting them through cleaner proportions, sharper wings and a more precise overall resolution, creating a more contemporary and premium expression. Although it is a small component on the vehicle, it plays an important role in brand perception. The final result was developed as a production-ready 3D model and is currently applied to LEVC vehicles such as the LEVC L380.",
+      myContribution: "My contribution covered the full development of the new emblem, from formal reinterpretation and visual refinement to the final production-oriented 3D model.",
+      process: "Emblem design, form refinement, production 3D modelling, Rhinoceros 3D and visualisation for presentation.",
     },
     "beyonca-knob": {
       title: "BeyonCa Control Knob",

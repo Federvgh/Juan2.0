@@ -116,8 +116,16 @@ export const projects: Project[] = [
   {
     slug: "levc-insignia",
     thumbnail: { src: assetUrl("/images/work/07.jpg"), alt: "LEVC Brand Insignia Redesign" },
-    hasVideo: false,
-    blocks: [],
+    hasVideo: true,
+    blocks: [
+      { _type: "image-full", _key: "levc-01", image: { src: assetUrl("/images/projects/levc-insignia/01.jpg"), alt: "LEVC brand evolution — old logo and TX taxi vs new logo and L380" } },
+      { _type: "image-full", _key: "levc-02", image: { src: assetUrl("/images/projects/levc-insignia/02.jpg"), alt: "LEVC insignia — design sketches and explorations on dark background" } },
+      { _type: "image-full", _key: "levc-03", image: { src: assetUrl("/images/projects/levc-insignia/03.jpg"), alt: "LEVC emblem comparison — 2017-2023 version vs 2024 redesign" } },
+      { _type: "video", _key: "levc-video", video: { src: assetUrl("/videos/levc-insignia.mp4") } },
+      { _type: "image-full", _key: "levc-04", image: { src: assetUrl("/images/projects/levc-insignia/04.jpg"), alt: "LEVC new emblem — close-up on bonnet with rain droplets" } },
+      { _type: "image-full", _key: "levc-05", image: { src: assetUrl("/images/projects/levc-insignia/05.jpg"), alt: "LEVC new emblem — detail view, chrome wings and horse motif" } },
+      { _type: "image-full", _key: "levc-06", image: { src: assetUrl("/images/projects/levc-insignia/06.jpg"), alt: "LEVC L380 — full vehicle front three-quarter view" } },
+    ],
   },
   {
     slug: "beyonca-knob",
