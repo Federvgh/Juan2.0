@@ -38,7 +38,7 @@ export function ImageLoop({ images, interval = 400 }: ImageLoopProps) {
   }, [images.length, interval]);
 
   return (
-    <div ref={ref} className="relative w-full aspect-[2400/1109] overflow-hidden">
+    <div ref={ref} className="relative w-full overflow-hidden" style={{ aspectRatio: `${images[0]?.width ?? 2400} / ${images[0]?.height ?? 1109}` }}>
       {images.map((img, i) => (
         <Image
           key={img.src}

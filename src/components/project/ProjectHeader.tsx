@@ -6,6 +6,7 @@ interface ProjectHeaderProps {
   description: string;
   myContribution: string;
   process: string;
+  hideContribution?: boolean;
 }
 
 export function ProjectHeader({
@@ -14,6 +15,7 @@ export function ProjectHeader({
   description,
   myContribution,
   process,
+  hideContribution = false,
 }: ProjectHeaderProps) {
   return (
     <div className="max-w-5xl mx-auto px-6 mb-12">
@@ -28,19 +30,23 @@ export function ProjectHeader({
         <p className="mt-8 text-base leading-relaxed">{description}</p>
       </ScrollReveal>
 
-      <ScrollReveal delay={0.2}>
-        <h2 className="mt-10 text-sm font-bold uppercase tracking-wide">
-          My Contribution
-        </h2>
-        <p className="mt-3 text-base leading-relaxed">{myContribution}</p>
-      </ScrollReveal>
+      {!hideContribution && (
+        <>
+          <ScrollReveal delay={0.2}>
+            <h2 className="mt-10 text-sm font-bold uppercase tracking-wide">
+              My Contribution
+            </h2>
+            <p className="mt-3 text-base leading-relaxed">{myContribution}</p>
+          </ScrollReveal>
 
-      <ScrollReveal delay={0.3}>
-        <h2 className="mt-10 text-sm font-bold uppercase tracking-wide">
-          Process
-        </h2>
-        <p className="mt-3 text-base leading-relaxed">{process}</p>
-      </ScrollReveal>
+          <ScrollReveal delay={0.3}>
+            <h2 className="mt-10 text-sm font-bold uppercase tracking-wide">
+              Process
+            </h2>
+            <p className="mt-3 text-base leading-relaxed">{process}</p>
+          </ScrollReveal>
+        </>
+      )}
     </div>
   );
 }

@@ -11,7 +11,7 @@ const projects = [
   "bow-timepiece",
   "bugatti-steering-wheel",
   "chopard-clock",
-  "beyonca-steering-wheel",
+  "luxury-ev-steering-wheel",
   "speaker-concept",
   "pagani-steering-wheel",
   "levc-insignia",

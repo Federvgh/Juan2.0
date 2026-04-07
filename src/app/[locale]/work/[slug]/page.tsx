@@ -4,6 +4,7 @@ import { locales } from "@/lib/i18n/config";
 import { getDictionary } from "@/lib/i18n/get-dictionary";
 import { projects, featuredProject, getProject, getAdjacentProjects } from "@/lib/projects";
 import { ProjectHeader } from "@/components/project/ProjectHeader";
+import { ProjectFooter } from "@/components/project/ProjectFooter";
 import { BlockRenderer } from "@/components/project/BlockRenderer";
 import { ProjectNav } from "@/components/project/ProjectNav";
 import {
@@ -69,11 +70,17 @@ export default async function ProjectPage({
         description={projectDict?.description ?? ""}
         myContribution={projectDict?.myContribution ?? ""}
         process={projectDict?.process ?? ""}
+        hideContribution
       />
 
       {project.blocks.map((block) => (
         <BlockRenderer key={block._key} block={block} />
       ))}
+
+      <ProjectFooter
+        myContribution={projectDict?.myContribution ?? ""}
+        process={projectDict?.process ?? ""}
+      />
 
       <ProjectNav prev={prev} next={next} locale={locale} dict={dict} />
     </article>

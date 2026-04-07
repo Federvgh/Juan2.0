@@ -29,8 +29,8 @@ Portfolio para diseñador industrial con experiencia internacional en automotive
 
 1. BOW Nautical Timepiece Concept
 2. Bugatti Millenium Steering Wheel
-3. Chopard Clock for BeyonCa
-4. BeyonCa Steering Wheel
+3. Chopard Clock Concept for Luxury EV Interior
+4. Luxury EV Steering Wheel Concept
 5. Speaker Concept (Bang & Olufsen x Swarovski)
 6. Pagani Steering Wheel Concept
 7. LEVC Brand Insignia Redesign
@@ -103,15 +103,19 @@ Cada proyecto tiene: descripción, My Contribution, Process. Video es campo opci
 | `ui-designer` | Decisiones visuales, componentes |
 | `qa-tester` | Testing, checklists pre-deploy |
 
-## Estado actual (27 Mar 2026)
+## Estado actual (08 Apr 2026)
 
-- Phases 0-10 completas. Falta deploy (Phase 11).
+- Phases 0-10 completas. Deploy a Amplify funcionando.
 - 39 páginas estáticas (3 locales × 13 rutas)
-- 4 videos comprimidos y funcionando (50MB total)
+- 10 videos comprimidos y funcionando
+- Proyectos con contenido completo: ShiftCore, Bugatti, Pagani, BOW, Luxury EV Steering Wheel, Chopard Clock, Modular Signage
+- Proyectos pendientes de contenido: Speaker, LEVC, BeyonCa Knob
+- Video player tiene botón de sonido (muted autoplay + toggle)
 - Scroll-frames spike: proof of concept con 2 frames en Bugatti. Necesita PNGs transparentes de Juan para producción.
-- Lighthouse: Performance 75, Accessibility 96, SEO 100, Best Practices 96 (dev mode — producción será mejor)
-- Contenido faltante: imágenes de galería de proyectos individuales (Juan debe proveerlas)
 - Traducciones ES/IT: placeholders (copias de EN)
+- My Contribution + Process se renderizan al final de la página (ProjectFooter), después de los bloques
+- ImageLoop usa aspect ratio dinámico (width/height de la primera imagen)
+- Dev server corre en puerto 3001 (configurado en package.json)
 
 ## Errores conocidos
 

@@ -81,3 +81,45 @@ Buscar: `grep -i "keyword" .claude/LESSONS_LEARNED.md`
 2. **Verificar anchos/márgenes** — todo el contenido dentro de una página de proyecto debe compartir el mismo max-width
 3. **Identificar componentes especiales** (loop, video, hero) y confirmar su comportamiento antes de implementar
 4. **Hacer /grill-me** cuando hay maquetas de referencia — preguntar específicamente sobre orden, anchos, y comportamientos interactivos
+
+## LL-011: Maquetas de Juan usan placeholders visuales — no son contenido literal
+**Fecha:** 2026-04-02
+**Síntoma:** Se interpretó una imagen en la maqueta como un bloque de contenido separado (01.jpg como hero), cuando en realidad era un placeholder visual con texto "VIDEO" superpuesto indicando dónde va el video.
+**Causa raíz:** No se entendió la convención de maquetas del cliente. Juan usa imágenes con texto superpuesto (ej: "VIDEO" en rojo) para indicar la posición de elementos, no como contenido final.
+**Fix:** Preguntar al usuario cómo interpretar cada elemento de la maqueta antes de implementar.
+**Lección:** Cuando Juan provee maquetas con texto superpuesto (VIDEO, TEXTO, etc.), esos son marcadores de posición. La imagen de fondo es decorativa/contexto, no un bloque a incluir.
+
+## LL-012: Hover-only UI no funciona en mobile — usar opacity-100 md:opacity-0 md:group-hover:opacity-100
+**Fecha:** 2026-04-02
+**Síntoma:** Botón de sonido en video player invisible en mobile — el usuario lo podía clickear pero no verlo.
+**Causa raíz:** `opacity-0 group-hover:opacity-100` depende de hover, que no existe en touchscreens.
+**Fix:** `opacity-100 md:opacity-0 md:group-hover:opacity-100` — siempre visible en mobile, hover-reveal en desktop.
+**Lección:** Cualquier UI que dependa de hover debe tener fallback visible en mobile. Patrón: `visible-by-default md:hidden-until-hover`.
+
+## LL-013: Browsers bloquean autoplay con sonido — patrón muted + toggle
+**Fecha:** 2026-04-02
+**Síntoma:** Se necesitaba que los videos arranquen con sonido.
+**Causa raíz:** Chrome, Safari y Firefox bloquean autoplay con audio por política de usuario.
+**Fix:** Autoplay muted + botón de toggle sonido (mute/unmute). El usuario activa el sonido manualmente.
+**Lección:** No intentar workarounds para autoplay con sonido. El patrón estándar es muted autoplay + toggle button.
+
+## LL-014: ImageLoop aspect ratio no debe ser hardcodeado
+**Fecha:** 2026-04-07
+**Síntoma:** Las imágenes del loop de Chopard y Luxury EV se veían con tamaño incorrecto — no coincidían con el resto de las imágenes del proyecto.
+**Causa raíz:** `ImageLoop` usaba `aspect-[2400/1109]` hardcodeado, que solo coincidía con las imágenes de ShiftCore. Otros proyectos tienen aspect ratios distintos.
+**Fix:** Cambiar a aspect ratio dinámico basado en width/height de la primera imagen: `style={{ aspectRatio: \`${images[0]?.width ?? 2400} / ${images[0]?.height ?? 1109}\` }}`. Agregar width/height a todas las imágenes de loop en projects.ts.
+**Lección:** No hardcodear aspect ratios en componentes reutilizables. Usar las dimensiones reales de los assets.
+
+## LL-015: My Contribution y Process van al final, después de los bloques visuales
+**Fecha:** 2026-04-07
+**Síntoma:** Las maquetas de Juan muestran "My Contribution" y "Process" al final de la página, después de todas las imágenes y videos.
+**Causa raíz:** Se renderizaban en el ProjectHeader (arriba), antes de los bloques.
+**Fix:** Crear ProjectFooter y mover My Contribution + Process después de los bloques. El header solo muestra título, subtitle y description.
+**Lección:** En las maquetas de Juan, el texto descriptivo va al final de la página del proyecto. Seguir siempre el orden de la maqueta.
+
+## LL-016: Eliminar menciones de marca cuando el cliente lo pide
+**Fecha:** 2026-04-07
+**Síntoma:** El proyecto "BeyonCa Steering Wheel" necesitaba renombrarse a "Luxury EV Steering Wheel Concept" sin menciones a BeyonCa.
+**Causa raíz:** NDA o preferencia del cliente — no quiere exponer el nombre de la marca.
+**Fix:** Cambiar slug, título, textos, alt text, videos, y verificar con grep exhaustivo que no quede ninguna mención. Incluir sitemap, CLAUDE.md y scripts.
+**Lección:** Cuando se pide eliminar una marca: 1) Cambiar slug y todos los assets 2) Grep exhaustivo case-insensitive 3) Regenerar sitemap 4) Actualizar CLAUDE.md. No olvidar metadata (alt text, OG tags).
