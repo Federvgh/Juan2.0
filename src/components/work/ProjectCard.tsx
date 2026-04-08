@@ -27,7 +27,7 @@ export function ProjectCard({
         whileHover={{ scale: 1.02 }}
         transition={{ duration: 0.4, ease: [0.25, 0.1, 0.25, 1] as const }}
       >
-        <div className="relative aspect-[4/3] overflow-hidden">
+        <div className="relative aspect-square overflow-hidden">
           <Image
             src={project.thumbnail.src}
             alt={project.thumbnail.alt}

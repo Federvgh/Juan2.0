@@ -1,8 +1,7 @@
 "use client";
 
-import { projects, featuredProject } from "@/lib/projects";
+import { projects } from "@/lib/projects";
 import { ProjectCard } from "./ProjectCard";
-import { FeaturedCard } from "./FeaturedCard";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import type { Dictionary } from "@/lib/i18n/dictionaries/en";
 
@@ -18,40 +17,38 @@ export function ProjectGrid({ dict, locale, columns = 3 }: ProjectGridProps) {
       ? "grid-cols-1 md:grid-cols-2"
       : "grid-cols-1 md:grid-cols-2 lg:grid-cols-3";
 
-  const featuredDict =
-    dict.projects[featuredProject.slug as keyof typeof dict.projects];
-
   return (
-    <div>
-      {/* Featured project — full width hero */}
-      <ScrollReveal>
-        <FeaturedCard
-          project={featuredProject}
-          title={featuredDict?.title ?? featuredProject.slug}
-          subtitle={featuredDict?.subtitle ?? ""}
-          locale={locale}
-        />
-      </ScrollReveal>
+    <div className={`grid ${gridCols} gap-6 md:gap-8`}>
+      {projects.map((project, i) => {
+        const projectDict =
+          dict.projects[project.slug as keyof typeof dict.projects];
 
-      {/* Regular projects grid */}
-      <div className={`grid ${gridCols} gap-6 md:gap-8`}>
-        {projects.map((project, i) => {
-          const projectDict =
-            dict.projects[project.slug as keyof typeof dict.projects];
+        const isLastRow =
+          columns === 3
+            ? i >= projects.length - (projects.length % 3 || 3)
+            : i >= projects.length - (projects.length % 2 || 2);
+        const itemsInLastRow =
+          columns === 3
+            ? projects.length % 3 || 3
+            : projects.length % 2 || 2;
+        const shouldCenter = isLastRow && itemsInLastRow < (columns === 3 ? 3 : 2);
 
-          return (
-            <ScrollReveal key={project.slug} delay={i * 0.05}>
-              <ProjectCard
-                project={project}
-                title={projectDict?.title ?? project.slug}
-                subtitle={projectDict?.subtitle ?? ""}
-                locale={locale}
-                priority={i < 3}
-              />
-            </ScrollReveal>
-          );
-        })}
-      </div>
+        return (
+          <ScrollReveal
+            key={project.slug}
+            delay={i * 0.05}
+            className={shouldCenter && columns === 3 && itemsInLastRow === 1 ? "lg:col-start-2" : ""}
+          >
+            <ProjectCard
+              project={project}
+              title={projectDict?.title ?? project.slug}
+              subtitle={projectDict?.subtitle ?? ""}
+              locale={locale}
+              priority={i < 3}
+            />
+          </ScrollReveal>
+        );
+      })}
     </div>
   );
 }
