@@ -128,10 +128,15 @@ export const projects: Project[] = [
     ],
   },
   {
-    slug: "beyonca-knob",
-    thumbnail: { src: assetUrl("/images/work/08.jpg"), alt: "BeyonCa Control Knob" },
-    hasVideo: false,
-    blocks: [],
+    slug: "luxury-ev-knob",
+    thumbnail: { src: assetUrl("/images/work/08.jpg"), alt: "Luxury EV Central Control Knob Concept" },
+    hasVideo: true,
+    blocks: [
+      { _type: "before-after", _key: "knob-ba", before: { src: assetUrl("/images/projects/luxury-ev-knob/slider-before.jpg"), alt: "Luxury, when silent — knob in dormant state", width: 1754, height: 912 }, after: { src: assetUrl("/images/projects/luxury-ev-knob/slider-after.jpg"), alt: "Technology, when needed — knob with active interface", width: 1754, height: 912 } },
+      { _type: "video", _key: "knob-video-1", video: { src: assetUrl("/videos/luxury-ev-knob-1.mp4") } },
+      { _type: "video", _key: "knob-video-2", video: { src: assetUrl("/videos/luxury-ev-knob-2.mp4") } },
+      { _type: "image-full", _key: "knob-01", image: { src: assetUrl("/images/projects/luxury-ev-knob/01.jpg"), alt: "Luxury EV control knob — close-up with illuminated interface and crystal ring" } },
+    ],
   },
   {
     slug: "modular-signage",
@@ -151,7 +156,7 @@ export const projects: Project[] = [
       { _type: "image-full", _key: "sig-05", image: { src: assetUrl("/images/projects/modular-signage/05.jpg"), alt: "Interactive tourist information — touchscreen terminal in public space" } },
       { _type: "image-full", _key: "sig-06", image: { src: assetUrl("/images/projects/modular-signage/06.jpg"), alt: "Public lighting unit — sunflower-type solar panel system at night" } },
       { _type: "video", _key: "sig-video", video: { src: assetUrl("/videos/modular-signage.mp4") } },
-      { _type: "image-full", _key: "sig-07", image: { src: assetUrl("/images/projects/modular-signage/07.jpg"), alt: "System details — integrated camera module and solar tracking panel" } },
+      { _type: "image-pair", _key: "sig-pair", left: { src: assetUrl("/images/projects/modular-signage/07.jpg"), alt: "Integrated camera — compact rotating module for discreet urban monitoring" }, right: { src: assetUrl("/images/projects/modular-signage/08.jpg"), alt: "Solar tracking — rotating panel system designed to follow the sun" } },
     ],
   },
 ];

@@ -15,7 +15,7 @@ const projects = [
   "speaker-concept",
   "pagani-steering-wheel",
   "levc-insignia",
-  "beyonca-knob",
+  "luxury-ev-knob",
   "modular-signage",
 ];
 

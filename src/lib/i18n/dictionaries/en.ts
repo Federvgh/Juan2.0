@@ -129,12 +129,12 @@ const en = {
       myContribution: "My contribution covered the full development of the new emblem, from formal reinterpretation and visual refinement to the final production-oriented 3D model.",
       process: "Emblem design, form refinement, production 3D modelling, Rhinoceros 3D and visualisation for presentation.",
     },
-    "beyonca-knob": {
-      title: "BeyonCa Control Knob",
+    "luxury-ev-knob": {
+      title: "Luxury EV Central Control Knob Concept",
       subtitle: "Crystal luxury interface",
-      description: "Central control knob with Swarovski crystal, adaptive circular touchscreen, fingerprint recognition and consistent pattern strategy.",
-      myContribution: "Conceptual design, interaction proposals and detailed 3D development.",
-      process: "The knob was designed as part of the BeyonCa interior family, maintaining visual and material coherence.",
+      description: "This project explores a central interaction component designed for a premium electric interior, where advanced technology and luxury are combined within a compact and carefully resolved object. The control integrates a high-precision metal structure, an illuminated crystal side ring with a 3D-developed texture, and a central touchscreen capable of adapting to multiple vehicle functions such as climate control, seat massage, ambient lighting, navigation, fragrance, air quality, user profile and parking assist. In addition to touch interaction, the component includes haptic click feedback and a physical push motion that reinforces precision and control. Working together with the background display, the system expands information in a clear, minimal and elegant way.",
+      myContribution: "I developed the project from the initial idea to its formal and visual resolution, including concept, interaction architecture, component design, detail development, 3D textures and full 3D modelling in Rhinoceros. I also worked on the system logic, the relationship between the knob and the background screen, and the final visualisation through KeyShot and AI-assisted workflows.",
+      process: "Concept development, interaction design, Rhinoceros 3D, 3D texture development, KeyShot and AI-assisted visual workflows.",
     },
     "modular-signage": {
       title: "Modular Urban Signage and Infrastructure System",

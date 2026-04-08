@@ -34,7 +34,7 @@ Portfolio para diseñador industrial con experiencia internacional en automotive
 5. Speaker Concept (Bang & Olufsen x Swarovski)
 6. Pagani Steering Wheel Concept
 7. LEVC Brand Insignia Redesign
-8. BeyonCa Control Knob
+8. Luxury EV Central Control Knob Concept
 9. Modular Urban Signage System
 
 Cada proyecto tiene: descripción, My Contribution, Process. Video es campo opcional.
@@ -109,7 +109,7 @@ Cada proyecto tiene: descripción, My Contribution, Process. Video es campo opci
 - 39 páginas estáticas (3 locales × 13 rutas)
 - 10 videos comprimidos y funcionando
 - Proyectos con contenido completo: ShiftCore, Bugatti, Pagani, BOW, Luxury EV Steering Wheel, Chopard Clock, Modular Signage
-- Proyectos pendientes de contenido: Speaker, LEVC, BeyonCa Knob
+- Proyectos pendientes de contenido: Speaker
 - Video player tiene botón de sonido (muted autoplay + toggle)
 - Scroll-frames spike: proof of concept con 2 frames en Bugatti. Necesita PNGs transparentes de Juan para producción.
 - Traducciones ES/IT: placeholders (copias de EN)

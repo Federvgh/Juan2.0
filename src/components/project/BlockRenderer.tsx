@@ -2,6 +2,7 @@ import Image from "next/image";
 import type { ContentBlock } from "@/lib/types";
 import { VideoPlayer } from "./VideoPlayer";
 import { ImageLoop } from "./ImageLoop";
+import { BeforeAfterSlider } from "./BeforeAfterSlider";
 import { ScrollRevealFrames } from "./ScrollRevealFrames";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 
@@ -69,6 +70,18 @@ export function BlockRenderer({ block }: BlockRendererProps) {
       return (
         <ScrollReveal className="my-8 md:my-12 max-w-5xl mx-auto px-6">
           <ImageLoop images={block.images} interval={block.interval} />
+        </ScrollReveal>
+      );
+
+    case "before-after":
+      return (
+        <ScrollReveal className="my-8 md:my-12 max-w-5xl mx-auto px-6">
+          <BeforeAfterSlider
+            before={block.before}
+            after={block.after}
+            width={block.before.width ?? 1754}
+            height={block.before.height ?? 912}
+          />
         </ScrollReveal>
       );
 
