@@ -1,6 +1,90 @@
-// Placeholder — same as EN until translations are provided
-import type { Dictionary } from "./en";
 import en from "./en";
 
-const es: Dictionary = en;
-export default es;
+const es = {
+  ...en,
+  nav: {
+    work: "Trabajo",
+    about: "Sobre mí",
+    contact: "Contacto",
+  },
+  about: {
+    ...en.about,
+    title: "Senior Industrial Designer — Premium Automotive Interiors, Luxury Components and 3D Concept Development",
+    subtitle: "Diseño componentes interiores refinados, interfaces y conceptos de producto donde la precisión material, la calma visual y la innovación funcional se combinan en una sola propuesta.",
+    availability: "Disponible para colaboraciones freelance seleccionadas, proyectos de consultoría y nuevas oportunidades de diseño.",
+    bio: "Soy diseñador industrial con más de 8 años de experiencia en interiores automotrices premium, diseño de productos de lujo y desarrollo avanzado en 3D. Mi trabajo se centra en transformar ideas en componentes bien resueltos, combinando pensamiento conceptual, refinamiento formal, sensibilidad material y modelado orientado a producción.\n\nTrabajo a lo largo de todo el proceso de diseño, desde los primeros bocetos y la dirección conceptual hasta el desarrollo detallado en 3D, el soporte de prototipos y la narrativa visual para presentación. Estoy especialmente enfocado en interiores premium para vehículos eléctricos, detalles de lujo, componentes relacionados con HMI y propuestas de diseño donde la calidad se define por precisión, coherencia y ejecución.",
+    location: "Con base en Valencia, con experiencia internacional en Argentina, Italia, Alemania, Irlanda, España y Reino Unido.",
+    selectedExperience: "Experiencia seleccionada",
+    selectedServices: "Servicios seleccionados",
+    skillsTools: "Skills / Tools",
+    languages: "Idiomas",
+    links: "Links",
+    experiences: [
+      {
+        company: "GC3 / LEVC",
+        role: "Interior Designer",
+        location: "Coventry, Reino Unido",
+        period: "2023–2026",
+        description: "Trabajé en el desarrollo de interiores automotrices premium, refinamiento conceptual y modelado 3D orientado a producción para futuros programas de vehículos eléctricos.",
+      },
+      {
+        company: "BeyonCa",
+        role: "Interior Designer",
+        location: "Múnich, Alemania",
+        period: "2022–2023",
+        description: "Contribuí al desarrollo de componentes interiores para vehículos eléctricos de lujo, interfaces y propuestas de diseño guiadas por materiales, con un fuerte foco en refinamiento, detalle y calidad visual.",
+      },
+      {
+        company: "3DEE Design Studio",
+        role: "Designer / 3D Modelling Specialist",
+        location: "Como, Italia",
+        period: "2020–2022",
+        description: "Desarrollé propuestas de interiorismo, modelos 3D y material de visualización para espacios arquitectónicos de alta gama y proyectos a medida.",
+      },
+      {
+        company: "Advanced Design / Skystyle",
+        role: "Product and Interior Design",
+        location: "Argentina",
+        period: "2017–2020",
+        description: "Trabajé en diseño de producto, conceptos guiados por innovación y propuestas premium de interiorismo, incluyendo movilidad, proyectos vinculados al mundo náutico y diseño orientado al lujo.",
+      },
+    ],
+    serviceItems: [
+      "Desarrollo de conceptos de producto premium",
+      "Diseño de detalles para interiores automotrices",
+      "Diseño y refinamiento de componentes para vehículos eléctricos",
+      "Modelado 3D y desarrollo de superficies orientado a producción",
+      "Integración de CMF y componentes de lujo",
+      "Visualización de diseño y narrativa para presentación",
+    ],
+    skillItems: [
+      "Rhinoceros 3D",
+      "KeyShot",
+      "Desarrollo conceptual",
+      "Refinamiento 3D",
+      "Soporte de prototipos",
+      "Detalle de materiales e interfaces",
+      "Flujos visuales asistidos por inteligencia artificial",
+    ],
+    languageItems: [
+      "Español — Nativo",
+      "Italiano — Fluido",
+      "Inglés — Nivel profesional de trabajo",
+    ],
+  },
+  contact: {
+    ...en.contact,
+    title: "Trabajemos juntos",
+    description: "Estoy abierto a colaboraciones freelance, trabajos de consultoría y nuevas oportunidades en interiores automotrices premium, diseño de productos de lujo y desarrollo avanzado en 3D.",
+    intro: "Si estás buscando apoyo en desarrollo conceptual, componentes interiores, detalles de lujo, refinamiento 3D o material de presentación, no dudes en contactarme.",
+    email: "Email",
+    linkedin: "LinkedIn",
+    locationLabel: "Ubicación",
+    locationValue: "Valencia, España",
+    portfolio: "PDF Portfolio",
+    downloadPortfolio: "Descargar Portfolio",
+    availability: "Disponible para proyectos freelance seleccionados y colaboraciones a largo plazo.",
+  },
+};
+
+export default es as unknown as typeof en;

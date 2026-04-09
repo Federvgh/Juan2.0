@@ -123,3 +123,24 @@ Buscar: `grep -i "keyword" .claude/LESSONS_LEARNED.md`
 **Causa raíz:** NDA o preferencia del cliente — no quiere exponer el nombre de la marca.
 **Fix:** Cambiar slug, título, textos, alt text, videos, y verificar con grep exhaustivo que no quede ninguna mención. Incluir sitemap, CLAUDE.md y scripts.
 **Lección:** Cuando se pide eliminar una marca: 1) Cambiar slug y todos los assets 2) Grep exhaustivo case-insensitive 3) Regenerar sitemap 4) Actualizar CLAUDE.md. No olvidar metadata (alt text, OG tags).
+
+## LL-017: Thumbnails de la grilla Work no deben compartir archivo entre proyectos
+**Fecha:** 2026-04-09
+**Síntoma:** Speaker y Pagani compartían el mismo thumbnail (05.jpg). La grilla mostraba la misma imagen para dos proyectos distintos.
+**Causa raíz:** Al reemplazar proyectos y cambiar slugs, los thumbnails numerados (01-10) se desalinearon. Se asignó el mismo número a dos proyectos sin verificar.
+**Fix:** Verificar con grep que cada `images/work/XX.jpg` sea único en projects.ts antes de agregar un proyecto nuevo.
+**Lección:** Después de agregar o reemplazar un proyecto, siempre correr: `grep "images/work/" src/lib/projects.ts` y verificar que no haya duplicados.
+
+## LL-018: Las maquetas de Juan incluyen textos intermedios entre bloques visuales
+**Fecha:** 2026-04-09
+**Síntoma:** La página del speaker no tenía los textos descriptivos entre el video y las imágenes que sí aparecían en la maqueta.
+**Causa raíz:** Al mapear la maqueta solo se identificaron bloques de imagen, video y slider. Los textos intermedios (como "Design Variant" o el overview después del video) se omitieron.
+**Fix:** Agregar bloques `text` entre los bloques visuales donde la maqueta lo indica.
+**Lección:** Al mapear una maqueta bloque por bloque (LL-010), incluir TODOS los elementos: imágenes, videos, sliders Y textos intermedios. No asumir que el texto solo va en header/footer.
+
+## LL-019: El subtitle y description del header deben coincidir con la maqueta, no con el docx Overview
+**Fecha:** 2026-04-09
+**Síntoma:** El subtitle del speaker decía "A luxury audio component inspired by the trumpet" pero la maqueta mostraba "An instrument behind the door".
+**Causa raíz:** Se usó el subtitle largo del docx en vez de leer el texto exacto que aparece en la maqueta.
+**Fix:** El subtitle y la description corta del header vienen de la maqueta. El texto largo del docx va en bloques `text` intermedios o en la description general.
+**Lección:** Siempre contrastar el texto del docx con la maqueta visual. La maqueta tiene prioridad para titulos, subtitulos y textos visibles. El docx provee el contenido completo pero la maqueta define QUE texto va DONDE.

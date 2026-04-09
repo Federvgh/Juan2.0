@@ -45,10 +45,19 @@ export const projects: Project[] = [
   },
   {
     slug: "speaker-concept",
-    thumbnail: { src: assetUrl("/images/work/04.jpg"), alt: "Speaker Concept" },
+    thumbnail: { src: assetUrl("/images/work/04.jpg"), alt: "Trumpet-Inspired Speaker Concept" },
     hasVideo: true,
     blocks: [
-      { _type: "video", _key: "speaker-video", video: { src: assetUrl("/videos/speaker-concept.mp4") } },
+      { _type: "before-after", _key: "spk-ba", before: { src: assetUrl("/images/projects/speaker-concept/slider-before.jpg"), alt: "Inspired by the trumpet — sketch of musician playing", width: 1781, height: 926 }, after: { src: assetUrl("/images/projects/speaker-concept/slider-after.jpg"), alt: "Shaped into sound — sketch of speaker integrated in door panel", width: 1781, height: 926 } },
+      { _type: "image-full", _key: "spk-01", image: { src: assetUrl("/images/projects/speaker-concept/01.jpg"), alt: "Concept sketch — trumpet player emerging from door panel architecture" } },
+      { _type: "video", _key: "spk-video", video: { src: assetUrl("/videos/speaker-concept.mp4") } },
+      { _type: "text", _key: "spk-text-1", content: "The project addressed a common challenge in luxury interiors: how to integrate a high-end audio component without making it feel purely technical or visually added-on. The response was to develop the speaker as a sculptural object, using the trumpet as a reference for precision, crafted metal surfaces and sound projection, while reinforcing the interior's material and emotional character." },
+      { _type: "image-full", _key: "spk-02", image: { src: assetUrl("/images/projects/speaker-concept/02.jpg"), alt: "Speaker integrated in door panel — light interior, wood and leather" } },
+      { _type: "image-full", _key: "spk-03", image: { src: assetUrl("/images/projects/speaker-concept/03.jpg"), alt: "Speaker close-up — Bang & Olufsen branding with crystal detail" } },
+      { _type: "image-pair", _key: "spk-pair", left: { src: assetUrl("/images/projects/speaker-concept/04.jpg"), alt: "Speaker on saxophone and sheet music — musical heritage reference" }, right: { src: assetUrl("/images/projects/speaker-concept/05.jpg"), alt: "Speaker detail — Bang & Olufsen text and crystal pattern" } },
+      { _type: "text", _key: "spk-text-2", content: "A secondary proposal explored a circular centre composition while preserving the same acoustic identity, material language and luxury positioning." },
+      { _type: "image-full", _key: "spk-06", image: { src: assetUrl("/images/projects/speaker-concept/06.jpg"), alt: "Circular design variant — B&O logo, dark background" } },
+      { _type: "image-full", _key: "spk-07", image: { src: assetUrl("/images/projects/speaker-concept/07.jpg"), alt: "Full-scale interior review — designer evaluating component in clay model" } },
     ],
   },
   {
@@ -155,6 +164,19 @@ export const projects: Project[] = [
       { _type: "image-full", _key: "sig-06", image: { src: assetUrl("/images/projects/modular-signage/06.jpg"), alt: "Public lighting unit — sunflower-type solar panel system at night" } },
       { _type: "video", _key: "sig-video", video: { src: assetUrl("/videos/modular-signage.mp4") } },
       { _type: "image-pair", _key: "sig-pair", left: { src: assetUrl("/images/projects/modular-signage/07.jpg"), alt: "Integrated camera — compact rotating module for discreet urban monitoring" }, right: { src: assetUrl("/images/projects/modular-signage/08.jpg"), alt: "Solar tracking — rotating panel system designed to follow the sun" } },
+    ],
+  },
+  {
+    slug: "luxury-ev-console",
+    thumbnail: { src: assetUrl("/images/work/11.jpg"), alt: "Luxury EV Center Console Concept" },
+    hasVideo: false,
+    blocks: [
+      { _type: "before-after", _key: "con-ba", before: { src: assetUrl("/images/projects/luxury-ev-console/slider-before.jpg"), alt: "Charging Surface — wireless charging with automatic tilt", width: 2401, height: 1249 }, after: { src: assetUrl("/images/projects/luxury-ev-console/slider-after.jpg"), alt: "Interactive Control Surface — digital control interface", width: 2401, height: 1249 } },
+      { _type: "image-full", _key: "con-01", image: { src: assetUrl("/images/projects/luxury-ev-console/01.jpg"), alt: "Center console — close-up, charging surface with crystal detail and ambient lighting" } },
+      { _type: "image-full", _key: "con-02", image: { src: assetUrl("/images/projects/luxury-ev-console/02.jpg"), alt: "Center console — side view, leather and stitching detail" } },
+      { _type: "image-full", _key: "con-03", image: { src: assetUrl("/images/projects/luxury-ev-console/03.jpg"), alt: "Center console — in context, natural light interior" } },
+      { _type: "image-full", _key: "con-04", image: { src: assetUrl("/images/projects/luxury-ev-console/04.jpg"), alt: "Luxury EV — full vehicle exterior, coastal road" } },
+      { _type: "image-full", _key: "con-05", image: { src: assetUrl("/images/projects/luxury-ev-console/05.jpg"), alt: "Full-scale prototyping — designer working on clay model interior" } },
     ],
   },
 ];

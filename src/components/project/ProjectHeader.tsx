@@ -23,11 +23,11 @@ export function ProjectHeader({
         <h1 className="text-3xl md:text-4xl font-bold tracking-tight">
           {title}
         </h1>
-        <p className="text-muted mt-2">{subtitle}</p>
+        <p className="mt-2">{subtitle}</p>
       </ScrollReveal>
 
       <ScrollReveal delay={0.1}>
-        <p className="mt-8 text-base leading-relaxed">{description}</p>
+        <p className="mt-8 text-base leading-relaxed text-muted">{description}</p>
       </ScrollReveal>
 
       {!hideContribution && (

@@ -15,8 +15,11 @@ export default async function ContactPage({
       <div className="max-w-xl mx-auto">
         <ScrollReveal>
           <h1 className="text-3xl font-bold tracking-tight">{c.title}</h1>
-          <p className="mt-4 text-base leading-relaxed text-muted">
+          <p className="mt-4 text-base leading-relaxed">
             {c.description}
+          </p>
+          <p className="mt-3 text-sm leading-relaxed text-muted">
+            {c.intro}
           </p>
         </ScrollReveal>
 
@@ -73,6 +76,12 @@ export default async function ContactPage({
             </dd>
           </ScrollReveal>
         </dl>
+
+        <ScrollReveal delay={0.3}>
+          <p className="mt-10 text-sm font-semibold text-neutral-500">
+            {c.availability}
+          </p>
+        </ScrollReveal>
       </div>
     </section>
   );

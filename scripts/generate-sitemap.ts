@@ -17,6 +17,7 @@ const projects = [
   "levc-insignia",
   "luxury-ev-knob",
   "modular-signage",
+  "luxury-ev-console",
 ];
 
 const today = new Date().toISOString().split("T")[0];

@@ -61,8 +61,8 @@ export function BlockRenderer({ block }: BlockRendererProps) {
 
     case "text":
       return (
-        <ScrollReveal className="my-8 md:my-12 max-w-3xl mx-auto px-6">
-          <p className="text-base leading-relaxed">{block.content}</p>
+        <ScrollReveal className="my-4 md:my-6 max-w-5xl mx-auto px-6">
+          <p className="text-sm leading-relaxed text-muted">{block.content}</p>
         </ScrollReveal>
       );
 

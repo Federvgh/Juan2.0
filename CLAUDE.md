@@ -31,7 +31,7 @@ Portfolio para diseñador industrial con experiencia internacional en automotive
 2. Bugatti Millenium Steering Wheel
 3. Chopard Clock Concept for Luxury EV Interior
 4. Luxury EV Steering Wheel Concept
-5. Speaker Concept (Bang & Olufsen x Swarovski)
+5. Trumpet-Inspired Speaker Concept
 6. Pagani Steering Wheel Concept
 7. LEVC Brand Insignia Redesign
 8. Luxury EV Central Control Knob Concept
@@ -108,8 +108,9 @@ Cada proyecto tiene: descripción, My Contribution, Process. Video es campo opci
 - Phases 0-10 completas. Deploy a Amplify funcionando.
 - 39 páginas estáticas (3 locales × 13 rutas)
 - 10 videos comprimidos y funcionando
-- Proyectos con contenido completo: ShiftCore, Bugatti, Pagani, BOW, Luxury EV Steering Wheel, Chopard Clock, Modular Signage
-- Proyectos pendientes de contenido: Speaker
+- Todos los 10 proyectos tienen contenido completo
+- BeforeAfterSlider component para comparación de imágenes (drag + touch)
+- Bloques de texto intermedios en proyectos (tipo "text" en ContentBlock)
 - Video player tiene botón de sonido (muted autoplay + toggle)
 - Scroll-frames spike: proof of concept con 2 frames en Bugatti. Necesita PNGs transparentes de Juan para producción.
 - Traducciones ES/IT: placeholders (copias de EN)
