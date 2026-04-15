@@ -21,7 +21,7 @@ Portfolio para diseñador industrial con experiencia internacional en automotive
 | Ruta | Contenido |
 |------|-----------|
 | `/work` (landing) | Grilla de 9 proyectos, 3 columnas (parametrizable a 2) |
-| `/work/[slug]` | Página individual: sistema de bloques (image-full, image-pair, video, text) |
+| `/work/[slug]` | Página individual: sistema de bloques (image-full, image-pair, video, text, before-after). Soporta `cover` image (arriba del header) |
 | `/about` | Foto B&W + bio + Experience + Education + Languages + Focus + In Process |
 | `/contact` | Datos directos: email, LinkedIn, ubicación, PDF download. Sin formulario |
 
@@ -33,7 +33,7 @@ Portfolio para diseñador industrial con experiencia internacional en automotive
 4. Luxury EV Steering Wheel Concept
 5. Trumpet-Inspired Speaker Concept
 6. Pagani Steering Wheel Concept
-7. LEVC Brand Insignia Redesign
+7. LEVC Heritage Emblem — 3D Design Development for Production
 8. Luxury EV Central Control Knob Concept
 9. Modular Urban Signage System
 
@@ -72,7 +72,10 @@ Cada proyecto tiene: descripción, My Contribution, Process. Video es campo opci
 - **NO** dark mode
 - **NO** Vercel (deploy en AWS Amplify, Juan ya tiene AWS)
 - Grilla parametrizable: 3 col desktop (actual), 2 tablet, 1 mobile
-- Sistema de bloques para layout de proyectos (tipo Notion)
+- Sistema de bloques para layout de proyectos (tipo Notion). Patrón de sección: `text(título) → visual → text(descripción)`
+- Text blocks cortos (<60 chars, sin punto) se renderizan como `<h3>` títulos de sección
+- Proyectos pueden tener `cover?: ImageAsset` que se renderiza ARRIBA del ProjectHeader
+- Before/After sliders: verificar dimensiones idénticas (`sips -z`) y labels internos para left/right
 - Menú overlay: stagger entrada, morphing hamburguesa→X, hover font-weight transition
 - Scroll-frames effect: spike con Bugatti, escalar si funciona
 - SEO completo: structured data (Person + CreativeWork), OG por proyecto, sitemap, robots.txt
@@ -103,20 +106,24 @@ Cada proyecto tiene: descripción, My Contribution, Process. Video es campo opci
 | `ui-designer` | Decisiones visuales, componentes |
 | `qa-tester` | Testing, checklists pre-deploy |
 
-## Estado actual (08 Apr 2026)
+## Estado actual (15 Apr 2026)
 
 - Phases 0-10 completas. Deploy a Amplify funcionando.
-- 39 páginas estáticas (3 locales × 13 rutas)
-- 10 videos comprimidos y funcionando
-- Todos los 10 proyectos tienen contenido completo
+- 45 páginas estáticas (3 locales × 15 rutas)
+- 11 proyectos con contenido completo
 - BeforeAfterSlider component para comparación de imágenes (drag + touch)
 - Bloques de texto intermedios en proyectos (tipo "text" en ContentBlock)
+- Text blocks soportan títulos de sección (detección automática por longitud)
 - Video player tiene botón de sonido (muted autoplay + toggle)
+- LEVC Insignia: cover image + 3 before/after sliders + 6 secciones con títulos
+- Knob: 2 before/after sliders + 2 videos + 6 secciones con títulos
+- Pagani: imágenes y video actualizados, layout reordenado
 - Scroll-frames spike: proof of concept con 2 frames en Bugatti. Necesita PNGs transparentes de Juan para producción.
 - Traducciones ES/IT: placeholders (copias de EN)
 - My Contribution + Process se renderizan al final de la página (ProjectFooter), después de los bloques
 - ImageLoop usa aspect ratio dinámico (width/height de la primera imagen)
 - Dev server corre en puerto 3001 (configurado en package.json)
+- Pendiente: LEVC L380 (proyecto nuevo), reorden de Work page, video Speaker
 
 ## Errores conocidos
 

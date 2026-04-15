@@ -23,5 +23,6 @@ export interface Project {
   slug: string;
   thumbnail: ImageAsset;
   hasVideo: boolean;
+  cover?: ImageAsset;
   blocks: ContentBlock[];
 }

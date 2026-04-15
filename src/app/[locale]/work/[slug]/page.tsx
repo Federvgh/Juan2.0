@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import { locales } from "@/lib/i18n/config";
 import { getDictionary } from "@/lib/i18n/get-dictionary";
@@ -63,6 +64,19 @@ export default async function ProjectPage({
           image: project.thumbnail.src,
         })}
       />
+      {project.cover && (
+        <div className="mb-8 md:mb-12 max-w-5xl mx-auto px-6">
+          <Image
+            src={project.cover.src}
+            alt={project.cover.alt}
+            width={2400}
+            height={1108}
+            sizes="(max-width: 1024px) 100vw, 1024px"
+            className="w-full h-auto"
+            priority
+          />
+        </div>
+      )}
       <ProjectHeader
         title={projectDict?.title ?? slug}
         subtitle={projectDict?.subtitle ?? ""}

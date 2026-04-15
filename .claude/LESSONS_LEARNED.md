@@ -144,3 +144,31 @@ Buscar: `grep -i "keyword" .claude/LESSONS_LEARNED.md`
 **Causa raíz:** Se usó el subtitle largo del docx en vez de leer el texto exacto que aparece en la maqueta.
 **Fix:** El subtitle y la description corta del header vienen de la maqueta. El texto largo del docx va en bloques `text` intermedios o en la description general.
 **Lección:** Siempre contrastar el texto del docx con la maqueta visual. La maqueta tiene prioridad para titulos, subtitulos y textos visibles. El docx provee el contenido completo pero la maqueta define QUE texto va DONDE.
+
+## LL-020: Secciones de proyecto siguen patrón título ARRIBA → visual → texto ABAJO
+**Fecha:** 2026-04-15
+**Síntoma:** Los text blocks de LEVC Insignia y Knob se renderizaron todos juntos antes del visual, o combinados en un solo bloque título+párrafo. La maqueta mostraba título arriba del slider/imagen y texto descriptivo abajo.
+**Causa raíz:** Se combinaron título y descripción en un solo text block con `\n`. Esto no permite colocar el visual ENTRE el título y la descripción.
+**Fix:** Usar text blocks SEPARADOS: uno corto para el título (arriba del visual) y otro largo para la descripción (abajo del visual). El BlockRenderer detecta títulos por longitud (<60 chars, sin punto) y los renderiza como `<h3>`.
+**Lección:** Cada sección de proyecto tiene 3 elementos: `text-título → visual (imagen/slider/video) → text-descripción`. Son 3 blocks separados en el array, no 1 bloque combinado. Verificar contra screenshots/maqueta que el título aparece ARRIBA y el texto ABAJO.
+
+## LL-021: Before/After slider — verificar cuál imagen va en before (izq) y after (der)
+**Fecha:** 2026-04-15
+**Síntoma:** El slider 3 de LEVC mostraba "Refined emblem" a la izquierda y "Earlier badge" a la derecha. Juan quería al revés.
+**Causa raíz:** Se asumió que `01.jpg` = before y `02.jpg` = after. Pero Juan nombra los archivos sin respetar esa convención. Los labels dentro de las imágenes ("Earlier badge", "Refined emblem") eran la referencia real.
+**Fix:** Leer los labels escritos DENTRO de cada imagen del slider. Verificar contra la maqueta qué va a la izquierda (before) y qué a la derecha (after).
+**Lección:** No asumir que 01=before y 02=after. Siempre leer las imágenes del slider y verificar los labels. Confirmar contra la maqueta/screenshots.
+
+## LL-022: Before/After slider — ambas imágenes deben tener dimensiones idénticas
+**Fecha:** 2026-04-15
+**Síntoma:** Sliders de LEVC tenían 1-3px de diferencia entre before y after (ej: 1753x896 vs 1754x897).
+**Causa raíz:** Juan provee imágenes con dimensiones ligeramente distintas entre sí.
+**Fix:** Después de copiar, verificar dimensiones con `sips` y normalizar con `sips -z height width` al tamaño mayor.
+**Lección:** Siempre verificar que before y after tengan exactamente las mismas dimensiones. Si no coinciden, normalizar con `sips -z`.
+
+## LL-023: Cover image — algunos proyectos necesitan imagen hero ARRIBA del ProjectHeader
+**Fecha:** 2026-04-15
+**Síntoma:** LEVC Insignia mostraba el título grande primero y después la imagen. Juan quería la imagen primero y después el título.
+**Causa raíz:** El ProjectHeader se renderiza antes de los blocks. No había forma de poner un bloque antes del header.
+**Fix:** Agregar campo opcional `cover?: ImageAsset` al tipo Project. En la page, si existe cover, se renderiza antes del ProjectHeader con `priority` loading.
+**Lección:** Cuando la maqueta muestra una imagen hero ARRIBA del título del proyecto, usar el campo `cover` en vez de ponerla como primer bloque. El cover se renderiza antes del ProjectHeader.

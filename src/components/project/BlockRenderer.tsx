@@ -59,12 +59,18 @@ export function BlockRenderer({ block }: BlockRendererProps) {
         </ScrollReveal>
       );
 
-    case "text":
+    case "text": {
+      const isTitle = block.content.length < 60 && !block.content.includes(".");
       return (
         <ScrollReveal className="my-4 md:my-6 max-w-5xl mx-auto px-6">
-          <p className="text-sm leading-relaxed text-muted">{block.content}</p>
+          {isTitle ? (
+            <h3 className="text-base font-medium text-foreground">{block.content}</h3>
+          ) : (
+            <p className="text-sm leading-relaxed text-muted">{block.content}</p>
+          )}
         </ScrollReveal>
       );
+    }
 
     case "image-loop":
       return (
