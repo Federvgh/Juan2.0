@@ -34,7 +34,7 @@ export function Header() {
         <div>
           <Link
             href={`/${locale}/work/`}
-            className="text-sm font-bold uppercase tracking-wide"
+            className="font-display text-sm font-normal uppercase tracking-[0.15em]"
           >
             Juan Pablo Tazzioli
           </Link>

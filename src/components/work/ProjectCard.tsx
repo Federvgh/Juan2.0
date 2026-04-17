@@ -8,7 +8,6 @@ import type { Project } from "@/lib/types";
 interface ProjectCardProps {
   project: Project;
   title: string;
-  subtitle: string;
   locale: string;
   priority?: boolean;
 }
@@ -16,7 +15,6 @@ interface ProjectCardProps {
 export function ProjectCard({
   project,
   title,
-  subtitle,
   locale,
   priority = false,
 }: ProjectCardProps) {
@@ -32,15 +30,12 @@ export function ProjectCard({
             src={project.thumbnail.src}
             alt={project.thumbnail.alt}
             fill
-            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+            sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 320px"
             className="object-cover"
             priority={priority}
           />
         </div>
-        <div className="mt-3">
-          <h2 className="text-sm font-semibold">{title}</h2>
-          <p className="text-xs text-muted mt-0.5">{subtitle}</p>
-        </div>
+        <h2 className="mt-4 font-display text-sm font-light tracking-wide">{title}</h2>
       </motion.article>
     </Link>
   );

@@ -10,7 +10,7 @@ export default async function WorkPage({
   const dict = await getDictionary(locale);
 
   return (
-    <section className="px-8 md:px-12 lg:px-20 pb-24">
+    <section className="px-8 md:px-12 lg:px-20 pt-16 md:pt-24 pb-24">
       <ProjectGrid dict={dict} locale={locale} />
     </section>
   );

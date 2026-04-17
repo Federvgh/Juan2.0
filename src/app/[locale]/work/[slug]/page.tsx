@@ -95,7 +95,7 @@ export default async function ProjectPage({
         process={projectDict?.process ?? ""}
       />
 
-      <ProjectNav prev={prev} next={next} locale={locale} dict={dict} />
+      <ProjectNav prev={prev} next={next} locale={locale} />
     </article>
   );
 }

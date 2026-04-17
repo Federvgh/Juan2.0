@@ -110,6 +110,7 @@ export const projects: Project[] = [
     thumbnail: { src: assetUrl("/images/work/01.jpg"), alt: "Luxury EV Steering Wheel Concept" },
     hasVideo: true,
     blocks: [
+      { _type: "image-full", _key: "lev-a01", image: { src: assetUrl("/images/projects/luxury-ev-steering-wheel/a01.jpg"), alt: "Luxury EV steering wheel — hero image" } },
       { _type: "video", _key: "lev-video", video: { src: assetUrl("/videos/luxury-ev-steering-wheel.mp4") } },
       { _type: "image-full", _key: "lev-01", image: { src: assetUrl("/images/projects/luxury-ev-steering-wheel/01.jpg"), alt: "Luxury EV steering wheel — interior view, warm lighting" } },
       { _type: "image-full", _key: "lev-02", image: { src: assetUrl("/images/projects/luxury-ev-steering-wheel/02.jpg"), alt: "Luxury EV steering wheel — interior view, dark ambience" } },

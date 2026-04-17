@@ -105,6 +105,7 @@ Cada proyecto tiene: descripción, My Contribution, Process. Video es campo opci
 | `seo-specialist` | Keywords, meta tags, structured data |
 | `ui-designer` | Decisiones visuales, componentes |
 | `qa-tester` | Testing, checklists pre-deploy |
+| `portfolio-copywriter` | Revisar/reescribir copy de proyectos, subtítulos, About |
 
 ## Estado actual (15 Apr 2026)
 
