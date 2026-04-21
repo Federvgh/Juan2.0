@@ -19,10 +19,17 @@ export type ContentBlock =
   | { _type: "image-loop"; _key: string; images: ImageAsset[]; interval?: number }
   | { _type: "before-after"; _key: string; before: ImageAsset; after: ImageAsset };
 
+export interface ExternalLink {
+  label: string;
+  url: string;
+  kind: "official" | "video-reference";
+}
+
 export interface Project {
   slug: string;
   thumbnail: ImageAsset;
   hasVideo: boolean;
   cover?: ImageAsset;
   blocks: ContentBlock[];
+  externalLinks?: ExternalLink[];
 }

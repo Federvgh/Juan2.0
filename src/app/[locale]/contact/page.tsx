@@ -1,5 +1,10 @@
 import { getDictionary } from "@/lib/i18n/get-dictionary";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
+import { assetUrl } from "@/lib/utils";
+
+const LINKEDIN_URL = "https://www.linkedin.com/in/juan-pablo-tazzioli-629b8565/";
+const EMAIL = "juanpablotazzioli@gmail.com";
+const PHONE = "+34603503082";
 
 export default async function ContactPage({
   params,
@@ -11,77 +16,71 @@ export default async function ContactPage({
   const c = dict.contact;
 
   return (
-    <section className="px-6 min-h-[70vh] flex items-center">
-      <div className="max-w-xl mx-auto">
-        <ScrollReveal>
-          <h1 className="text-3xl font-bold tracking-tight">{c.title}</h1>
-          <p className="mt-4 text-base leading-relaxed">
-            {c.description}
-          </p>
-          <p className="mt-3 text-sm leading-relaxed text-muted">
-            {c.intro}
-          </p>
-        </ScrollReveal>
+    <section className="px-6 pb-24 pt-8 md:pt-16 max-w-6xl mx-auto">
+      <ScrollReveal>
+        <p className="text-2xl md:text-4xl leading-snug text-center max-w-4xl mx-auto mb-20 md:mb-32">
+          {c.description}
+        </p>
+      </ScrollReveal>
 
-        <dl className="mt-10 space-y-5">
+      <div className="flex justify-center md:justify-end">
+        <dl className="space-y-8 md:mr-12 lg:mr-24">
           <ScrollReveal delay={0.1}>
-            <dt className="text-xs font-bold uppercase tracking-wide">
-              {c.email}
-            </dt>
-            <dd className="mt-1">
+            <dt className="text-sm font-semibold">{c.email}</dt>
+            <dd className="mt-2">
               <a
-                href="mailto:juanpablotazzioli@gmail.com"
-                className="text-sm underline hover:text-muted transition-colors"
+                href={`mailto:${EMAIL}`}
+                className="text-sm hover:underline transition-colors"
               >
-                juanpablotazzioli@gmail.com
+                {EMAIL}
               </a>
             </dd>
           </ScrollReveal>
 
           <ScrollReveal delay={0.15}>
-            <dt className="text-xs font-bold uppercase tracking-wide">
-              {c.linkedin}
-            </dt>
-            <dd className="mt-1">
+            <dt className="text-sm font-semibold">{c.linkedin}</dt>
+            <dd className="mt-2">
               <a
-                href="https://www.linkedin.com/in/juanpablotazzioli/"
+                href={LINKEDIN_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-sm underline hover:text-muted transition-colors"
+                className="text-sm hover:underline transition-colors"
               >
-                LinkedIn Profile
+                {c.linkedin}
               </a>
             </dd>
           </ScrollReveal>
 
           <ScrollReveal delay={0.2}>
-            <dt className="text-xs font-bold uppercase tracking-wide">
-              {c.locationLabel}
-            </dt>
-            <dd className="mt-1 text-sm">{c.locationValue}</dd>
+            <dt className="text-sm font-semibold">{c.phone}</dt>
+            <dd className="mt-2">
+              <a
+                href={`tel:${PHONE}`}
+                className="text-sm hover:underline transition-colors"
+              >
+                {PHONE}
+              </a>
+            </dd>
           </ScrollReveal>
 
           <ScrollReveal delay={0.25}>
-            <dt className="text-xs font-bold uppercase tracking-wide">
-              {c.portfolio}
-            </dt>
-            <dd className="mt-1">
+            <dt className="text-sm font-semibold">{c.locationLabel}</dt>
+            <dd className="mt-2 text-sm">{c.locationValue}</dd>
+          </ScrollReveal>
+
+          <ScrollReveal delay={0.3}>
+            <dt className="text-sm font-semibold">{c.portfolio}</dt>
+            <dd className="mt-2">
               <a
-                href="/portfolio.pdf"
+                href={assetUrl("/JuanPabloTazzioli_Portfolio_2026.pdf")}
                 download
-                className="text-sm underline hover:text-muted transition-colors"
+                className="text-sm hover:underline transition-colors"
               >
                 {c.downloadPortfolio}
               </a>
             </dd>
           </ScrollReveal>
         </dl>
-
-        <ScrollReveal delay={0.3}>
-          <p className="mt-10 text-sm font-semibold text-neutral-500">
-            {c.availability}
-          </p>
-        </ScrollReveal>
       </div>
     </section>
   );

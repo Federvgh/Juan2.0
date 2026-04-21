@@ -93,6 +93,7 @@ export default async function ProjectPage({
       <ProjectFooter
         myContribution={projectDict?.myContribution ?? ""}
         process={projectDict?.process ?? ""}
+        externalLinks={project.externalLinks}
       />
 
       <ProjectNav prev={prev} next={next} locale={locale} />

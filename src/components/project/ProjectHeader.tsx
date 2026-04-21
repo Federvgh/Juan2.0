@@ -20,10 +20,10 @@ export function ProjectHeader({
   return (
     <div className="max-w-5xl mx-auto px-6 mb-12">
       <ScrollReveal>
-        <h1 className="text-3xl md:text-4xl font-normal tracking-tight">
+        <h1 className="text-3xl md:text-4xl font-normal tracking-tight uppercase">
           {title}
         </h1>
-        <p className="mt-2">{subtitle}</p>
+        {subtitle && <p className="mt-2">{subtitle}</p>}
       </ScrollReveal>
 
       <ScrollReveal delay={0.1}>

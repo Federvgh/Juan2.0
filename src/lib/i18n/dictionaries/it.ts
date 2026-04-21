@@ -1,6 +1,172 @@
-// Placeholder — same as EN until translations are provided
 import type { Dictionary } from "./en";
-import en from "./en";
 
-const it: Dictionary = en;
+const it: Dictionary = {
+  nav: {
+    work: "Work",
+    about: "About",
+    contact: "Contact",
+  },
+  about: {
+    title: "JUAN PABLO TAZZIOLI",
+    subtitle: "Designer industriale",
+    bio: "Sono un designer industriale con oltre 8 anni di esperienza nel product design, negli interni automobilistici e nello sviluppo avanzato in 3D. Il mio lavoro spazia dagli interni e componenti per veicoli premium agli orologi, alle calzature e ai progetti legati allo spatial e interior design, dando forma a un approccio fondato sul dettaglio, sulla sensibilità materica e sulla fattibilità produttiva. Mi interessa creare prodotti e concetti chiari, utili e ben risolti, combinando pensiero concettuale, innovazione funzionale e un'esecuzione accurata. La modellazione 3D occupa un ruolo centrale nel mio processo, perché mi permette di esplorare, sviluppare e comunicare il design con precisione. Aver vissuto e lavorato in contesti internazionali diversi mi ha dato una prospettiva ampia e adattabile, arricchita da culture, scale e modi differenti di affrontare il design.",
+    selectedExperience: "Esperienza selezionata",
+    experiences: [
+      {
+        company: "Gc3 / LEVC",
+        role: "Interior Designer",
+        location: "Coventry, Regno Unito",
+        period: "2023–2026",
+        description: "Ho lavorato allo sviluppo di interni automotive premium, al raffinamento concettuale e al dettaglio 3D orientato alla produzione per futuri programmi di veicoli elettrici.",
+      },
+      {
+        company: "BeyonCa",
+        role: "Interior Designer",
+        location: "Monaco, Germania",
+        period: "2022–2023",
+        description: "Ho contribuito allo sviluppo di componenti interni per veicoli elettrici di lusso, interfacce e proposte progettuali guidate dalla materialità, con un forte focus su raffinamento, dettaglio e qualità visiva.",
+      },
+      {
+        company: "3DEE Design Studio",
+        role: "Designer / Specialista in Modellazione 3D",
+        location: "Como, Italia",
+        period: "2020–2022",
+        description: "Ho sviluppato proposte di interior design, modelli 3D e materiali di visualizzazione per spazi architettonici di alta gamma e progetti bespoke.",
+      },
+      {
+        company: "Advanced Design / Skystyle",
+        role: "Product and Interior Design",
+        location: "Argentina",
+        period: "2017–2020",
+        description: "Ho lavorato nel design di prodotto, in concetti orientati all'innovazione e in proposte di interni premium, inclusi progetti legati alla mobilità, al mondo nautico e al design di lusso.",
+      },
+    ],
+    education: "Formazione",
+    educationItems: [
+      { name: "Design Industriale", institution: "Università Nazionale di Córdoba, Argentina" },
+      { name: "Product Design e Transportation Design", institution: "Advanced Design, Córdoba | 2017" },
+    ],
+    selectedTools: "Strumenti selezionati",
+    toolsText: "Rhinoceros 3D, KeyShot, Photoshop, sviluppo concettuale, raffinamento 3D, supporto alla prototipazione, dettaglio di materiali e interfacce, workflow visivi assistiti da IA",
+    languages: "Lingue",
+    languageItems: [
+      "Spagnolo — Madrelingua",
+      "Italiano — Fluente",
+      "Inglese — Livello professionale di lavoro",
+    ],
+    areasOfFocus: "Aree di focus",
+    focusText: "Interni automotive premium - Sviluppo prodotto - Design guidato dal dettaglio - Innovazione funzionale - Sviluppo 3D - Raffinamento di materiali e interfacce.",
+  },
+  contact: {
+    description: "Disponibile per collaborazioni freelance selezionate, consulenze e nuove opportunità nel design.",
+    email: "Email",
+    linkedin: "LinkedIn",
+    phone: "Telefono",
+    locationLabel: "Posizione",
+    locationValue: "Valencia, Spagna",
+    portfolio: "Portfolio PDF",
+    downloadPortfolio: "Scarica portfolio",
+  },
+  projects: {
+    "bow-timepiece": {
+      title: "BOW TIMEPIECE",
+      subtitle: "",
+      description: "Sviluppo di un orologio meccanico concettuale ispirato al mondo nautico, progettato per un utente con una connessione emozionale con le imbarcazioni e con il linguaggio dello yachting. Il progetto ha preso l'idea del bow come punto di partenza principale — la prua come gesto, direzione e carattere — e l'ha combinata con riferimenti al deck, tradotti in ritmi di superficie, proporzioni e un'architettura generale con forte presenza tecnica. Questo è stato rafforzato da dettagli ispirati a componenti nautici, consolidando l'identità dell'oggetto e il suo legame con il mondo della navigazione. Il risultato è stato un pezzo scultoreo, preciso e originale, concepito per trasmettere esclusività, raffinamento tecnico e una sensibilità chiaramente legata all'ambiente nautico.",
+      myContribution: "Progetto sviluppato in collaborazione con Lucas Colombo Carbone, con il quale ho lavorato a stretto contatto nella costruzione della direzione concettuale del pezzo. All'interno di questo processo condiviso, il mio ruolo si è concentrato nel portare l'idea alla sua piena materializzazione, sviluppando l'orologio nella sua interezza sia a livello formale sia 3D, dall'architettura generale al dettaglio di ogni componente esterno e interno. A partire da sketch iniziali e idee concettuali, ho lavorato sulla definizione di proporzioni, costruzione, assemblaggio e logica delle parti, con l'obiettivo di dare coerenza e precisione al progetto. Sono stato inoltre responsabile della visualizzazione finale, inclusi render e materiali di presentazione utilizzati per comunicare e rafforzare il valore della proposta.",
+      process: "Sviluppo concettuale collaborativo, esplorazione di riferimenti nautici, definizione di architettura e linguaggio formale, modellazione 3D completa di componenti esterni e interni in Rhinoceros, studi di proporzioni e costruzione, e visualizzazione per presentazione e comunicazione del concetto.",
+    },
+    "bugatti-steering-wheel": {
+      title: "BUGATTI STEERING WHEEL",
+      subtitle: "",
+      description: "Sviluppo di un concetto di volante di lusso creato per gli interni del Bugatti Millenium, un progetto sviluppato insieme a Lucas Colombo Carbone e Matías Damico. La proposta ha cercato di reinterpretare il linguaggio visivo e di performance caratteristico di Bugatti attraverso un volante più contemporaneo e centrato sul conducente, combinando proporzioni sportive, superfici scolpite, display digitali, switch in alluminio e una funzione di avviamento tramite impronta digitale all'interno di una composizione più pulita, integrata e avanzata. Il risultato è stato un componente progettato per rafforzare precisione, esclusività e una lettura tecnologica attuale all'interno dell'abitacolo.",
+      myContribution: "All'interno di quel progetto, il mio lavoro si è concentrato sul design e sullo sviluppo completo del volante, concepito specificamente per l'interno del Bugatti Millenium. Il mio contributo ha incluso la definizione formale del pezzo, la modellazione 3D, il raffinamento delle superfici e l'integrazione visiva dell'interfaccia e degli elementi materici, con l'obiettivo di bilanciare identità di marca, carattere sportivo e un senso di lusso tecnologico all'interno di un unico componente.",
+      process: "Sviluppo concettuale del volante in relazione agli interni, raffinamento della forma, modellazione 3D in Rhinoceros, integrazione di interfaccia e dettagli materici, e visualizzazione in KeyShot per presentazione e comunicazione del concetto.",
+    },
+    "speaker-concept": {
+      title: "TRUMPET SPEAKER CONCEPT",
+      subtitle: "",
+      description: "Sviluppo di un concetto di speaker integrato nella porta per un interno di lusso, creato per Beyonca Opus 1. Il progetto è nato da un'idea concettuale chiara: portare la presenza di uno strumento musicale dietro la porta e tradurre la tromba in un linguaggio di interior design. A partire da quel riferimento, lo speaker è stato sviluppato come un oggetto scultoreo integrato nell'architettura della porta, combinando espressione formale, precisione materica e una forte identità acustica. La proposta ha incorporato superfici metalliche raffinate ed elementi in cristallo sviluppati con una logica quasi artigianale, rafforzando il carattere emozionale dell'interno.",
+      myContribution: "Il mio ruolo si è concentrato nel tradurre quell'idea concettuale in una risoluzione formale, tecnica e tridimensionale credibile. Questo ha incluso l'adattamento del concetto ai diametri reali degli altoparlanti richiesti, il raffinamento delle proporzioni, lo sviluppo del modello 3D completo, la definizione di materiali, texture e pattern strategy all'interno dell'abitacolo, e la realizzazione di modelli stampati per verificare scala e presenza fisica. Il lavoro ha incluso anche esplorazione di fattibilità e contatto con fornitori per avvicinare il concetto a una soluzione realistica.",
+      process: "Ricerca concettuale, traduzione formale della tromba in un componente d'interni, definizione di architettura e proporzioni, modellazione 3D in Rhinoceros, prototipi stampati, sviluppo di materiali e pattern, esplorazione di fattibilità con i fornitori e visualizzazione per la comunicazione del concetto.",
+    },
+    "turbine-clock": {
+      title: "TURBINE CLOCK CONCEPT",
+      subtitle: "",
+      description: "Sviluppo di un orologio concettuale di lusso per la BeyonCa Opus 1 GT, progettato come un pezzo di precisione con una forte presenza tecnica ed emozionale all'interno dell'abitacolo. Il progetto ha preso come ispirazione principale la turbina di un aereo, non solo nell'architettura esterna dell'orologio ma anche nella costruzione interna del quadrante, con l'obiettivo di trasmettere precisione, sofisticazione e un carattere tecnico raffinato. La proposta ha reinterpretato i codici dell'alta orologeria all'interno di un contesto automotive contemporaneo, esplorando sia una versione analogica sia un'alternativa digitale per valutare diversi livelli di espressione, tecnologia e integrazione con l'interno.",
+      myContribution: "Ho sviluppato questo pezzo dall'inizio alla fine, dall'idea iniziale e dai primi sketch concettuali fino alla sua completa risoluzione in 3D. Il mio lavoro ha incluso la definizione del linguaggio formale, delle proporzioni, del dettaglio interno ed esterno, e la traduzione precisa del concetto di turbina in ciascun componente. Ho inoltre sviluppato texture e superfici in 3D, utilizzando il diamante come base della pattern strategy, ed esplorato diverse varianti per studiare presenza, materialità e coerenza con il linguaggio generale del veicolo. Sebbene lo sviluppo facesse parte di un lavoro di team, sono stato responsabile dell'ideazione del pezzo, del suo sviluppo e del suo accompagnamento fino a una proposta finale con un alto livello di precisione in ogni dettaglio.",
+      process: "Sviluppo concettuale tramite sketch, definizione di un'architettura ispirata alla turbina, modellazione 3D completa in Rhinoceros, sviluppo di texture e pattern strategy, esplorazione di varianti analogiche e digitali, preparazione per stampa 3D per verificare scala e proporzioni, e visualizzazione in KeyShot per presentazione e comunicazione del concetto.",
+    },
+    "pagani-steering-wheel": {
+      title: "PAGANI STEERING WHEEL",
+      subtitle: "",
+      description: "Sviluppo di un concetto di volante ispirato al linguaggio visivo di Pagani, reinterpretato attraverso una proposta più integrata e contemporanea. Il progetto ha preso l'ovale come fondamento principale del linguaggio formale, mentre gli switch circolari e il cluster centrale di pulsanti richiamavano l'identità meccanica ed espressiva caratteristica del marchio. A partire da quel punto, la proposta ha cercato di combinare carattere sportivo, raffinamento materico e un'espressione più scultorea all'interno di un unico componente.",
+      myContribution: "Ho sviluppato il volante attraverso raffinamento formale, modellazione 3D e integrazione di una geometria basata sull'ovale insieme agli elementi di interfaccia e ai dettagli materici. Il mio lavoro si è concentrato nel tradurre quel riferimento di marca in una proposta più chiara, coerente e contemporanea, raffinando con attenzione sia la lettura complessiva del pezzo sia la risoluzione dei suoi dettagli.",
+      process: "Sviluppo concettuale, raffinamento della forma, modellazione 3D in Rhinoceros, visualizzazione in KeyShot e workflow visivi assistiti da IA per animazione e presentazione.",
+    },
+    "modular-signage": {
+      title: "MODULAR SIGNAGE SYSTEM",
+      subtitle: "",
+      description: "Progetto di tesi sviluppato per la città di Córdoba, Argentina, a partire dall'osservazione di un problema ricorrente nello spazio pubblico: la coesistenza di diversi tipi di segnaletica, semafori e supporti urbani installati da fornitori differenti nel corso del tempo, rendendo più difficile la manutenzione, la sostituzione dei componenti e la creazione di un linguaggio visivo coerente in tutta la città. A partire da questa diagnosi, la proposta ha introdotto un sistema modulare basato su un'unica estrusione in alluminio, capace di adattarsi a molteplici funzioni urbane attraverso variazioni di lunghezza e configurazione interna. L'obiettivo era unificare i criteri, semplificare la manutenzione, ridurre i costi e permettere a un unico profilo di essere applicato a segnaletica stradale, informazioni per il trasporto, orientamento turistico, infrastrutture ciclabili, wayfinding e illuminazione pubblica.",
+      myContribution: "In questo progetto ho lavorato alla definizione completa del sistema, dall'approccio concettuale fino alla sua risoluzione formale e funzionale. Ho sviluppato il profilo di estrusione, la logica modulare, le diverse applicazioni e il linguaggio generale del sistema, con l'obiettivo di garantire che un unico elemento potesse rispondere con chiarezza a diverse esigenze urbane. Il lavoro si è concentrato sulla combinazione di adattabilità, coerenza visiva e logica produttiva, comprendendo come un sistema unificato potesse integrare differenti tecnologie interne in funzione dell'uso richiesto, sia per illuminazione, segnalazione, informazione o interazione.",
+      process: "Identificazione del problema urbano, sviluppo concettuale del sistema, definizione del profilo di estrusione, studio delle funzioni e delle varianti d'uso, integrazione di diverse tecnologie interne secondo l'applicazione, modellazione 3D in Rhinoceros e visualizzazione per la presentazione del progetto.",
+    },
+    "luxury-ev-knob": {
+      title: "LUXURY EV CONTROL KNOB",
+      subtitle: "",
+      description: "Sviluppo di un concetto di controllo multifunzione compatto per un interno premium elettrico, progettato per combinare materialità di lusso, interazione tattile e funzionalità digitale in un unico oggetto raffinato. Il progetto ha esplorato come condensare più funzioni del veicolo in un solo punto di controllo visivamente calmo, riducendo la complessità dell'interfaccia senza perdere intuitività d'uso né qualità percepita. Cristallo, metallo, feedback aptico, interazione touch e un display di supporto dedicato sono stati integrati in un unico sistema di interfaccia stratificato, permettendo al componente di passare da dettaglio di lusso silenzioso, quando inattivo, a elemento di controllo intelligente quando in uso.",
+      myContribution: "Ho sviluppato il progetto dal concetto iniziale fino alla sua risoluzione formale e visiva, includendo l'architettura di interazione, il design del componente, la modellazione 3D, lo sviluppo delle texture e la relazione tra il comando e il suo display di supporto dedicato. Il mio ruolo ha incluso anche la definizione della logica tattile del sistema, bilanciando touch, rotazione, feedback al click, illuminazione e gerarchia visiva all'interno di un'interfaccia compatta.",
+      process: "Sviluppo concettuale, interaction design, definizione della logica di interfaccia stratificata, modellazione 3D in Rhinoceros, sviluppo texture, visualizzazione in KeyShot e workflow assistiti da IA per animazione dell'interfaccia e storytelling.",
+    },
+    "shiftcore-footwear": {
+      title: "SHIFTCORE FOOTWEAR",
+      subtitle: "",
+      description: "Sviluppo di un sistema di calzature modulare e adattabile costruito attorno a un'unica shell esterna e a inner boots intercambiabili, progettato per rispondere a diversi stili d'uso, livelli di comfort e situazioni quotidiane. Il progetto ha esplorato come una base comune potesse trasformarsi in funzione delle esigenze dell'utente, consentendo di cambiare lo strato interno per modificare carattere, funzione ed esperienza d'uso della calzatura senza sostituire l'intera struttura. La proposta ha inoltre introdotto una logica pratica legata alla vita quotidiana e al viaggio: lasciare la shell esterna all'ingresso, usare l'inner boot in ambienti interni e trasportare più opzioni occupando meno spazio. Formalmente, il sistema mirava a bilanciare un'identità sportiva, flessibilità d'uso e una lettura chiara tra shell, inner e prodotto assemblato.",
+      myContribution: "Ho sviluppato il progetto dal concetto originale e dalla logica del sistema modulare fino alla sua risoluzione formale, modellazione 3D, render, animazioni e narrazione visiva finale. Il mio lavoro si è concentrato nel definire la relazione tra shell e inner boot, l'architettura generale del prodotto, le varianti cromatiche e materiche, e il modo in cui il sistema doveva comunicare adattabilità, leggerezza e trasformazione d'uso.",
+      process: "Sviluppo concettuale, strategia di prodotto, definizione del sistema modulare, design della shell e degli inner intercambiabili, modellazione 3D in Rhinoceros, visualizzazione, animazione e raffinamento visivo assistito da IA.",
+    },
+    "levc-insignia": {
+      title: "EMBLEMA HERITAGE LEVC",
+      subtitle: "",
+      description: "Sviluppo di un emblema 3D raffinato e pronto per la produzione a partire dall'identità 2D approvata di LEVC per una nuova generazione di veicoli elettrici. Più che ridefinire il marchio in due dimensioni, il progetto si è concentrato sul modo in cui l'identità dovesse esistere come componente esterno reale, bilanciando precisione, qualità percepita e fattibilità produttiva. Partendo da uno degli emblemi più riconoscibili associati agli iconici black cab londinesi, il design è stato reinterpretato con un approccio più contemporaneo e consapevole dal punto di vista produttivo, integrando rilievo, controllo delle superfici e adattamento al cofano in una proposta unica e risolta. L'emblema finale è stato applicato concretamente sul LEVC L380, contribuendo a definire la direzione dell'emblema per la nuova era elettrica del marchio.",
+      myContribution: "Il mio ruolo si è concentrato sulla traduzione dell'identità 2D approvata in un emblema 3D completamente risolto e pronto per la produzione. Questo ha incluso la definizione di volumi, raggi, altezze, spessori, texture e qualità delle superfici, oltre all'adattamento dell'emblema alla reale curvatura del cofano e al perfezionamento della geometria in funzione dei vincoli tecnici, degli obiettivi di qualità percepita e dei limiti concreti di producibilità.",
+      process: "Analisi dell'identità 2D approvata, sviluppo dell'emblema in 3D, definizione di rilievo e texture, perfezionamento delle superfici, integrazione con la curvatura del cofano, modellazione orientata alla produzione in Rhinoceros e visualizzazione per presentazione e validazione del design.",
+    },
+    "levc-l380": {
+      title: "SVILUPPO CABINA BESPOKE",
+      subtitle: "",
+      description: "Sviluppo di due proposte bespoke per la cabina posteriore del LEVC L380, concepite come interni premium orientati alla produzione per veicoli reali da esposizione. Il progetto si è concentrato sulla traduzione di idee complesse per la cabina posteriore in soluzioni interior risolte, bilanciando comfort, privacy, integrazione funzionale e raffinamento visivo all'interno di uno spazio fortemente vincolato. Al centro del lavoro vi è stato lo sviluppo di un'architettura divisoria raffinata, capace di integrare molteplici funzioni in un unico elemento coerente e di definire due interpretazioni distinte dell'esperienza del passeggero posteriore. Presentato da LEVC come parte della reveal degli interni del L380 nell'aprile 2024, il progetto ha fatto parte della nuova fase elettrica del marchio.",
+      myContribution: "All'interno del team di interior design, il mio ruolo si è concentrato sullo sviluppo del divisorio posteriore e sulla sua integrazione con i montanti laterali, il tetto e il pavimento, così come sulla risoluzione delle principali funzioni contenute in tale architettura. Questo ha incluso vetro privacy, integrazione display, bocchette elettroniche, componenti audio, storage superiore, moduli di servizio scorrevoli, refrigerazione centrale, maniglie laterali, vano ombrello con drenaggio, battitacco illuminati e la struttura inferiore in alluminio con integrazione HVAC e illuminazione.",
+      process: "Sviluppo concettuale di team, definizione dell'architettura della cabina posteriore, raffinamento 3D, studi di packaging e meccanismi, coordinamento con l'ingegneria, integrazione funzionale e sviluppo di dettagli bespoke per l'implementazione su veicolo reale.",
+    },
+    "luxury-ev-steering-wheel": {
+      title: "VOLANTE PER EV DI LUSSO",
+      subtitle: "",
+      description: "Raffinamento di un concetto di volante per un veicolo elettrico di alta gamma, focalizzato sul trasformare una base già definita in un oggetto con un senso più forte di lusso, precisione e sofisticazione tecnologica. Il progetto ha esplorato come reinterpretare gli switch convenzionali attraverso una proposta più integrata, combinando superfici pulite, interazione touch con feedback al click, elementi in cristallo illuminati e una pattern strategy allineata al linguaggio più ampio dell'abitacolo. Utilizzando il diamante come riferimento principale della pattern strategy, il volante è stato sviluppato come un componente capace di esprimere allo stesso tempo innovazione, qualità percepita e un carattere materico più esclusivo.",
+      myContribution: "All'interno del team, il mio ruolo si è concentrato sul raffinamento dei dettagli del volante per elevarlo verso una proposta più lussuosa e tecnologicamente avanzata. Questo ha incluso il ripensamento degli switch tradizionali attraverso superfici touch con feedback aptico al click, con l'obiettivo di trasmettere precisione, chiarezza d'uso e un'esperienza di interazione di alta qualità. Ho inoltre lavorato all'integrazione di elementi in cristallo illuminati, alla definizione di dettagli legati alla pattern strategy complessiva e allo sviluppo di un linguaggio più coerente tra lusso artigianale e tecnologia avanzata. Il processo è iniziato con esplorazioni concettuali e sketch, per poi essere tradotto in 3D attraverso lo sviluppo di geometrie, texture, dettagli e illuminazione, seguito da visualizzazione e rendering in KeyShot.",
+      process: "Esplorazione concettuale tramite sketch, raffinamento di switch e interfaccia tattile, integrazione di cristallo e illuminazione, sviluppo della pattern strategy, modellazione 3D in Rhinoceros, definizione di texture e dettagli, e visualizzazione in KeyShot per presentazione e comunicazione del concetto.",
+    },
+    "luxury-ev-console": {
+      title: "CONSOLE CENTRALE PER EV DI LUSSO",
+      subtitle: "",
+      description: "Sviluppo di una console centrale per la BeyonCa Opus 1 GT, concepita come un elemento capace di combinare architettura pulita, raffinamento materico e integrazione funzionale all'interno di un insieme coerente. Il progetto ha esplorato diverse possibilità per l'area di controllo centrale, puntando a una soluzione visivamente calma ma tecnologicamente avanzata, in cui cristallo, metallo, illuminazione ambientale e continuità formale lavorassero insieme come parte di un linguaggio interno unificato. La proposta ha riunito funzioni quotidiane, storage, interfacce e dettagli legati al comfort in una console progettata per rafforzare il carattere premium dell'abitacolo.",
+      myContribution: "All'interno del team, ho lavorato direttamente allo sviluppo e al raffinamento della console, sia nella sua forma generale sia nella definizione di diversi dettagli chiave. Il mio contributo ha incluso la risoluzione della zona inferiore con portabicchieri, caricatore telefono, PRND in cristallo e metallo, l'apertura e le funzioni delle porte della console, così come la bocchetta d'aria posteriore per i passeggeri del sedile posteriore. Ho inoltre lavorato all'integrazione di elementi in cristallo, al raffinamento dei dettagli e alla coerenza visiva della console all'interno del linguaggio generale degli interni, con l'obiettivo di bilanciare lusso, precisione e chiarezza d'uso.",
+      process: "Sviluppo concettuale, studi di packaging, definizione di architettura e dettagli, modellazione 3D in Rhinoceros, raffinamento di componenti e funzioni, e supporto alla prototipazione fresata in scala 1:1 per valutare proporzioni, integrazione e funzionalità. Visualizzazione in KeyShot e strumenti assistiti da IA per la comunicazione del concetto.",
+    },
+    "buenos-aires-medal": {
+      title: "MEDAGLIA BUENOS AIRES 2018",
+      subtitle: "",
+      description: "Sviluppo di una medaglia concettuale per i Giochi Olimpici Giovanili di Buenos Aires 2018, concepita come un pezzo capace di riunire, su un'unica faccia, un'idea più ampia di sport, umanità e appartenenza globale. Più che rappresentare la gerarchia tradizionale di primo, secondo e terzo posto, la proposta mirava a esprimere valori come impegno, umiltà, fair play, solidarietà, apprendimento condiviso, uguaglianza e cambiamento sociale positivo attraverso tre figure poste alla stessa altezza, che si abbracciano tra loro e abbracciano il pianeta. La composizione ha inoltre incorporato l'inclinazione dell'asse terrestre come gesto strutturale, collegando la medaglia alla diversità del mondo, ai cicli naturali e all'idea che tutti apparteniamo allo stesso sistema. L'integrazione del Braille e dei codici grafici dell'evento ha ulteriormente rafforzato un approccio inclusivo, simbolico e contemporaneo.",
+      myContribution: "Ho sviluppato il concetto e la risoluzione completa della medaglia, traducendo un ampio insieme di valori in una composizione chiara, leggibile e simbolicamente coerente. Il mio lavoro ha incluso la costruzione narrativa del pezzo, la definizione di geometria, rilievi, proporzioni e dettagli di superficie, e la realizzazione della modellazione 3D completa per studiare come ciascun elemento dovesse convivere su un'unica faccia senza perdere chiarezza né forza concettuale. Il focus è stato bilanciare significato, leggibilità visiva e presenza materica, portando l'idea dal suo fondamento simbolico a una proposta formale precisa e ben risolta.",
+      process: "Ricerca concettuale su valori e simboli, sviluppo della narrazione visiva, esplorazione di composizione e gerarchia grafica, modellazione 3D di rilievi e superfici, integrazione di Braille, tipografia e asse terrestre, e visualizzazione per la presentazione del concetto.",
+    },
+    "geneva-by-pagani": {
+      title: "GENEVA BY PAGANI",
+      subtitle: "Un'icona automobilistica ad alte prestazioni tradotta in un oggetto meccanico da indossare al polso.",
+      description: "Sviluppo di un orologio concettuale di lusso creato per Pagani, concepito come un'estensione diretta dell'universo materico, tecnico ed emozionale del marchio. Più che prendere riferimenti superficiali dal veicolo, il progetto ha cercato di condensare in un unico oggetto i codici più riconoscibili di Pagani: ossessione per il dettaglio, precisione meccanica, equilibrio tra artigianato e tecnologia, e una forte identità formale legata all'automobile. L'orologio è stato concepito come una piccola scultura in movimento, con il veicolo collocato al centro della composizione e in rotazione sul proprio asse come se fosse esposto su una piattaforma di presentazione, diventando il gesto principale attraverso cui si legge il tempo. Attorno ad esso, materiali, viti, fibra di carbonio, alluminio fresato, elementi distintivi, colori e texture rafforzano l'idea di indossare un piccolo Pagani al polso.",
+      myContribution: "Progetto sviluppato in collaborazione con Lucas Colombo Carbone, con il quale ho costruito e raffinato in modo continuo la direzione concettuale del pezzo nel corso del processo. All'interno di questo lavoro condiviso, il mio ruolo si è concentrato nel portare la proposta alla sua completa materializzazione, sviluppando l'orologio a livello formale, tecnico e tridimensionale fino alla sua risoluzione finale. Il mio lavoro ha incluso la definizione dell'architettura generale, la traduzione del linguaggio Pagani in ogni componente, la modellazione 3D completa della cassa e di tutte le sue parti, lo sviluppo di dettagli ispirati al veicolo — come la corona collegata ai quattro scarichi distintivi, le superfici fresate e la logica materica dell'oggetto — così come l'esplorazione di soluzioni innovative, il raffinamento delle qualità formali più sottili necessarie per consolidare la proposta e la produzione della visualizzazione finale del progetto.",
+      process: "Ricerca sui codici formali e materici di Pagani, sviluppo concettuale dell'orologio come estensione del veicolo, definizione dell'architettura e della logica di lettura del tempo, modellazione 3D completa della cassa, dei componenti e del packaging, esplorazione di materiali e varianti, sviluppo di cinturini intercambiabili e visualizzazione finale per la presentazione del concetto.",
+    },
+  },
+};
+
 export default it;

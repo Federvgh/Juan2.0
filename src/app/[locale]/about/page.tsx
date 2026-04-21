@@ -13,16 +13,16 @@ export default async function AboutPage({
   const a = dict.about;
 
   return (
-    <section className="px-6 pb-24 max-w-5xl mx-auto">
-      {/* Hero: photo + bio */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 mb-16">
+    <section className="px-6 pb-24 max-w-6xl mx-auto">
+      {/* Hero: photo + name + bio */}
+      <div className="grid grid-cols-1 md:grid-cols-[minmax(0,1fr)_minmax(0,1.4fr)] gap-10 md:gap-16 mb-20 md:mb-24">
         <ScrollReveal>
-          <div className="relative aspect-[3/4] w-full max-w-sm">
+          <div className="relative aspect-[3/4] w-full max-w-sm md:max-w-none">
             <Image
               src={assetUrl("/images/about/profile.png")}
               alt="Juan Pablo Tazzioli"
               fill
-              sizes="(max-width: 768px) 100vw, 50vw"
+              sizes="(max-width: 768px) 100vw, 40vw"
               className="object-cover grayscale"
               priority
             />
@@ -30,110 +30,93 @@ export default async function AboutPage({
         </ScrollReveal>
 
         <ScrollReveal delay={0.1}>
-          <h1 className="text-2xl md:text-3xl font-bold tracking-tight leading-snug">
-            {a.title}
-          </h1>
-          <p className="mt-4 text-base leading-relaxed">{a.subtitle}</p>
-          <p className="mt-4 text-sm font-semibold text-neutral-500">
-            {a.availability}
-          </p>
-          <p className="mt-6 text-sm leading-relaxed text-muted whitespace-pre-line">
-            {a.bio}
-          </p>
-          <p className="mt-4 text-xs text-muted">{a.location}</p>
+          <div className="md:pt-12">
+            <h1 className="text-center uppercase tracking-[0.25em] text-sm md:text-base">
+              {a.title}
+            </h1>
+            <p className="mt-4 text-center text-lg md:text-xl">{a.subtitle}</p>
+            <p className="mt-10 md:mt-14 text-sm leading-relaxed text-justify">
+              {a.bio}
+            </p>
+          </div>
         </ScrollReveal>
       </div>
 
-      {/* Selected Experience */}
-      <ScrollReveal>
-        <h2 className="text-sm font-bold uppercase tracking-wide mb-8">
-          {a.selectedExperience}
-        </h2>
-      </ScrollReveal>
-      <div className="space-y-16 mb-16">
-        {a.experiences.map((exp, i) => (
-          <ScrollReveal key={exp.company} delay={i * 0.05}>
-            <div>
-              <h3 className="text-base font-semibold">{exp.company}</h3>
-              <p className="text-sm text-muted mt-1">
-                {exp.role} — {exp.location} | {exp.period}
-              </p>
-              <p className="text-sm mt-2 leading-relaxed text-muted">
-                {exp.description}
-              </p>
+      {/* Two-col grid: experience (left) + education/tools/languages/focus (right) */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16">
+        {/* Left column: Selected Experience */}
+        <div>
+          <ScrollReveal>
+            <h2 className="text-sm font-semibold uppercase tracking-wide mb-8">
+              {a.selectedExperience}
+            </h2>
+          </ScrollReveal>
+          <div className="space-y-10">
+            {a.experiences.map((exp, i) => (
+              <ScrollReveal key={exp.company + i} delay={i * 0.05}>
+                <div>
+                  <h3 className="text-sm">
+                    {exp.company} — {exp.role}
+                  </h3>
+                  <p className="text-sm mt-1">
+                    {exp.location} | {exp.period}
+                  </p>
+                  <p className="text-sm mt-2 leading-relaxed">
+                    {exp.description}
+                  </p>
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+        </div>
+
+        {/* Right column: Education, Tools, Languages, Focus */}
+        <div className="space-y-10">
+          {/* Education */}
+          <ScrollReveal>
+            <h2 className="text-sm font-semibold uppercase tracking-wide mb-4">
+              {a.education}
+            </h2>
+            <div className="space-y-3">
+              {a.educationItems.map((item, i) => (
+                <div key={i}>
+                  <p className="text-sm">{item.name}</p>
+                  <p className="text-sm">{item.institution}</p>
+                </div>
+              ))}
             </div>
           </ScrollReveal>
-        ))}
-      </div>
 
-      {/* Selected Services */}
-      <ScrollReveal>
-        <h2 className="text-sm font-bold uppercase tracking-wide mb-6">
-          {a.selectedServices}
-        </h2>
-      </ScrollReveal>
-      <div className="space-y-2 mb-16">
-        {a.serviceItems.map((item, i) => (
-          <ScrollReveal key={i} delay={i * 0.05}>
-            <p className="text-sm text-muted">{item}</p>
+          {/* Selected Tools */}
+          <ScrollReveal delay={0.05}>
+            <h2 className="text-sm font-semibold uppercase tracking-wide mb-4">
+              {a.selectedTools}
+            </h2>
+            <p className="text-sm leading-relaxed">{a.toolsText}</p>
           </ScrollReveal>
-        ))}
-      </div>
 
-      {/* Skills / Tools */}
-      <ScrollReveal>
-        <h2 className="text-sm font-bold uppercase tracking-wide mb-6">
-          {a.skillsTools}
-        </h2>
-      </ScrollReveal>
-      <div className="flex flex-wrap gap-x-6 gap-y-2 mb-16">
-        {a.skillItems.map((item, i) => (
-          <ScrollReveal key={i} delay={i * 0.05}>
-            <span className="text-sm text-muted">{item}</span>
+          {/* Languages */}
+          <ScrollReveal delay={0.1}>
+            <h2 className="text-sm font-semibold uppercase tracking-wide mb-4">
+              {a.languages}
+            </h2>
+            <div className="flex flex-wrap gap-x-6 gap-y-2">
+              {a.languageItems.map((item, i) => (
+                <span key={i} className="text-sm">
+                  {item}
+                </span>
+              ))}
+            </div>
           </ScrollReveal>
-        ))}
-      </div>
 
-      {/* Languages */}
-      <ScrollReveal>
-        <h2 className="text-sm font-bold uppercase tracking-wide mb-6">
-          {a.languages}
-        </h2>
-      </ScrollReveal>
-      <div className="space-y-2 mb-16">
-        {a.languageItems.map((item, i) => (
-          <ScrollReveal key={i} delay={i * 0.05}>
-            <p className="text-sm text-muted">{item}</p>
+          {/* Areas of Focus */}
+          <ScrollReveal delay={0.15}>
+            <h2 className="text-sm font-semibold uppercase tracking-wide mb-4">
+              {a.areasOfFocus}
+            </h2>
+            <p className="text-sm leading-relaxed">{a.focusText}</p>
           </ScrollReveal>
-        ))}
-      </div>
-
-      {/* Links */}
-      <ScrollReveal>
-        <h2 className="text-sm font-bold uppercase tracking-wide mb-6">
-          {a.links ?? "Links"}
-        </h2>
-      </ScrollReveal>
-      <div className="space-y-2">
-        <ScrollReveal delay={0.05}>
-          <a
-            href="https://www.linkedin.com/in/juanpablotazzioli/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-sm underline hover:text-muted transition-colors"
-          >
-            LinkedIn
-          </a>
-        </ScrollReveal>
-        <ScrollReveal delay={0.1}>
-          <a
-            href="/portfolio.pdf"
-            download
-            className="text-sm underline hover:text-muted transition-colors block"
-          >
-            Download PDF Portfolio
-          </a>
-        </ScrollReveal>
+        </div>
       </div>
     </section>
   );

@@ -10,14 +10,18 @@ const pages = ["work", "about", "contact"];
 const projects = [
   "bow-timepiece",
   "bugatti-steering-wheel",
-  "chopard-clock",
-  "luxury-ev-steering-wheel",
   "speaker-concept",
+  "turbine-clock",
   "pagani-steering-wheel",
-  "levc-insignia",
-  "luxury-ev-knob",
   "modular-signage",
+  "luxury-ev-knob",
+  "shiftcore-footwear",
+  "levc-insignia",
+  "levc-l380",
+  "luxury-ev-steering-wheel",
   "luxury-ev-console",
+  "buenos-aires-medal",
+  "geneva-by-pagani",
 ];
 
 const today = new Date().toISOString().split("T")[0];

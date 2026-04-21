@@ -9,14 +9,13 @@ Monocromática estricta. Sin colores de acento.
 | Token | Valor | Uso |
 |-------|-------|-----|
 | background | #FFFFFF | Fondo |
-| foreground | #000000 | Texto, títulos |
+| foreground | #4D4D4D | Texto, títulos (pedido explícito de Juan, 21 abr 2026) |
 | muted | #B0B0B0 | Texto secundario, menú inactivo |
 | border | #E5E5E5 | Divisores (con moderación) |
-| link | #0000EE | Solo en Contact page |
 
 ## Tipografía
 
-**Inter** (variable). Única font family.
+**Jost** (variable) como primaria, Inter como fallback. Única font family.
 
 ## Animaciones
 
