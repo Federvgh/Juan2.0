@@ -23,8 +23,8 @@ export default async function ContactPage({
         </p>
       </ScrollReveal>
 
-      <div className="flex justify-center md:justify-end">
-        <dl className="space-y-8 md:mr-12 lg:mr-24">
+      <div className="flex justify-center">
+        <dl className="space-y-8">
           <ScrollReveal delay={0.1}>
             <dt className="text-sm font-semibold">{c.email}</dt>
             <dd className="mt-2">

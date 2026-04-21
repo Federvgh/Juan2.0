@@ -15,7 +15,7 @@ export default async function AboutPage({
   return (
     <section className="px-6 pb-24 max-w-6xl mx-auto">
       {/* Hero: photo + name + bio */}
-      <div className="grid grid-cols-1 md:grid-cols-[minmax(0,1fr)_minmax(0,1.4fr)] gap-10 md:gap-16 mb-20 md:mb-24">
+      <div className="grid grid-cols-1 md:grid-cols-[minmax(0,0.75fr)_minmax(0,1.4fr)] gap-10 md:gap-16 mb-20 md:mb-24">
         <ScrollReveal>
           <div className="relative aspect-[3/4] w-full max-w-sm md:max-w-none">
             <Image
