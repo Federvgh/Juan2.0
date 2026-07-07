@@ -8,14 +8,15 @@
 
 Indicadores de M/L: "implementar", "refactorizar", "nueva feature", "integrar"
 
-## Thinking modes
+## Effort y thinking
 
-| Modo | Cuándo |
+La escalera `think`/`think hard`/`think harder` YA NO es keyword (texto plano, sin efecto mecánico). La palanca real es **`effort`** (`/effort` o `effortLevel` en settings). Solo **`ultrathink`** sigue siendo keyword.
+
+| Palanca | Cuándo |
 |------|--------|
-| `think` | Análisis ligero |
-| `think hard` | Debugging, decisiones medianas |
-| `think harder` | Diseño de sistemas, refactors |
-| `ultrathink` | Arquitectura, trade-offs críticos |
+| `effort` low/medium | Rachas mecánicas largas |
+| `effort` high/xhigh | Diseño, debugging duro, decisiones |
+| `ultrathink` (literal en el prompt) | Arquitectura, trade-offs críticos (único keyword vigente) |
 
 ## Antes de codear
 
